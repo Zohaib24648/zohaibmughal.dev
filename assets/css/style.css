@@ -742,6 +742,31 @@ footer {
 
 .next-card .arrow { font-family: var(--font-head); font-size: 34px; color: var(--accent); }
 
+/* ---------- Lenis smooth scroll ---------- */
+
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-stopped { overflow: hidden; }
+
+/* ---------- Social icon buttons ---------- */
+
+.socials { display: flex; gap: 12px; align-items: center; }
+
+.icon-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--line-2);
+  display: grid;
+  place-items: center;
+  color: var(--text-2);
+  transition: transform 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+.icon-btn:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+.icon-btn svg { width: 20px; height: 20px; fill: currentColor; display: block; }
+
 /* ---------- Reveal on scroll ---------- */
 
 .reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.7s ease, transform 0.7s ease; }
