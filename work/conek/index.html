@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Conek — Quotes &amp; Projects Tool for A-SAFE · Zohaib Ali Mughal</title>
+<meta name="description" content="Case study: Conek — an internal sales platform for A-SAFE. Quote to sales order to invoice over event-driven microservices, with sub-100ms inter-service latency and 95% test coverage.">
+<link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-accent="conek">
+
+<nav class="nav" aria-label="Main">
+  <div class="nav-inner">
+    <a class="nav-brand" href="../../">Zohaib Ali Mughal <span class="mono">/ FULL-STACK</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">MENU</button>
+    <div class="nav-links" id="nav-links">
+      <a href="../../#work">← All work</a>
+      <a href="../../assets/decks/Conek.pdf" download>Deck PDF</a>
+      <a class="nav-cta" href="../../#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="cs-hero">
+  <div class="container">
+    <span class="eyebrow"><span class="accent">02 / Sales Operations</span> — Case Study</span>
+    <img class="work-logo" src="../../assets/img/conek-logo-white.svg" alt="Conek">
+    <h1>Quotes &amp; Projects Tool for A&#8209;SAFE</h1>
+    <p class="lede">An internal sales platform — quote to sales order to invoice — wired into the surrounding tool ecosystem: CRM, Drawing Tool and Route 66.</p>
+    <div class="cs-meta">
+      <div class="cs-meta-item"><span class="k">Role</span><span class="v">Full-Stack Engineer</span></div>
+      <div class="cs-meta-item"><span class="k">Timeline</span><span class="v">Nov 2024 — Feb 2025</span></div>
+      <div class="cs-meta-item"><span class="k">Client</span><span class="v">A-Safe Digital (internal platform)</span></div>
+      <div class="cs-meta-item"><span class="k">Shape</span><span class="v">Event-driven microservices</span></div>
+    </div>
+    <div class="cs-hero-media reveal"><img src="../../assets/img/conek-hero.png" alt="Conek quotes and projects dashboards"></div>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="accent">The Brief</span></span>
+      <h2>Quote-to-cash, handled end to end.</h2>
+      <p class="lede">Own the full sales lifecycle and project invoicing across A-Safe's tool ecosystem — CRM, Drawing Tool and Route 66 — keeping services fast, decoupled and dependable.</p>
+    </div>
+    <div class="reveal" style="display:grid; gap:18px; max-width:44em">
+      <div class="feat"><span class="dot"></span><span>Sales lifecycle — quote through to sales order</span></div>
+      <div class="feat"><span class="dot"></span><span>Order items, project invoicing &amp; quote-PDF generation</span></div>
+      <div class="feat"><span class="dot"></span><span>Analytics &amp; integrations — CRM, Drawing Tool, Route 66</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="accent">Architecture &amp; Stack</span></span>
+      <h2>Event-driven services, type-safe contracts.</h2>
+    </div>
+    <div class="flow reveal">
+      <div class="fnode"><span class="t">Next.js Client</span><span class="s">Sales UI</span></div>
+      <span class="farrow">→</span>
+      <div class="fnode"><span class="t">Fastify API</span><span class="s">Gateway</span></div>
+      <span class="farrow">→</span>
+      <div class="fnode hot"><span class="t">NATS JetStream</span><span class="s">Event bus</span></div>
+      <span class="farrow">→</span>
+      <div class="fnode"><span class="t">Domain Services</span><span class="s">Clean architecture</span></div>
+      <span class="farrow">→</span>
+      <div class="fnode"><span class="t">AWS ECS</span><span class="s">Lambda · S3</span></div>
+    </div>
+    <div class="arch-cols reveal">
+      <div>
+        <div class="arch-col-label">Stack</div>
+        <div class="stackrow"><span class="stacklabel">Frontend</span><div class="chips"><span class="chip">Next.js</span><span class="chip">React</span></div></div>
+        <div class="stackrow"><span class="stacklabel">Backend</span><div class="chips"><span class="chip">Node.js</span><span class="chip">Fastify</span><span class="chip">TypeScript</span></div></div>
+        <div class="stackrow"><span class="stacklabel">Eventing</span><div class="chips"><span class="chip">NATS JetStream</span></div></div>
+        <div class="stackrow"><span class="stacklabel">Cloud</span><div class="chips"><span class="chip">AWS</span><span class="chip">ECS</span><span class="chip">Lambda</span><span class="chip">S3</span></div></div>
+      </div>
+      <div>
+        <div class="arch-col-label">Key Decisions</div>
+        <div class="decision"><span class="n">01</span><span>Event-driven service boundaries over NATS JetStream</span></div>
+        <div class="decision"><span class="n">02</span><span>Strict type-safe contracts between services</span></div>
+        <div class="decision"><span class="n">03</span><span>Clean-architecture layering for testable domains</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="accent">Walkthrough</span></span>
+      <h2>Quote to cash.</h2>
+    </div>
+    <div class="walk-group reveal">
+      <div class="walk-group-label">Sales Platform · Web</div>
+      <div class="shots">
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/conek/projects.png" alt="Conek projects and quote pipeline" loading="lazy"></div><div class="shot-cap">Projects &amp; quote pipeline</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/conek/quote-detail.png" alt="Conek quote detail and line items" loading="lazy"></div><div class="shot-cap">Quote detail &amp; line items</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/conek/pdf-wizard.png" alt="Conek quote PDF builder" loading="lazy"></div><div class="shot-cap">Quote-PDF builder</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/conek/sales-order.png" alt="Conek sales order" loading="lazy"></div><div class="shot-cap">Sales order detail</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/conek/invoice.png" alt="Conek project invoicing" loading="lazy"></div><div class="shot-cap">Project invoicing</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/conek/analytics.png" alt="Conek analytics" loading="lazy"></div><div class="shot-cap">Project analytics</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="impact">
+  <div class="container impact-grid reveal">
+    <div class="metrics">
+      <div class="metric"><span class="num">&lt;100<small>ms</small></span><span class="cap">Inter-service latency</span></div>
+      <div class="metric"><span class="num">500+</span><span class="cap">Tests · 95% coverage</span></div>
+      <div class="metric"><span class="num">0</span><span class="cap">Critical prod regressions</span></div>
+    </div>
+    <p>An event-driven architecture over NATS JetStream kept services fast and decoupled — quote-to-cash flowing reliably across the A-Safe tool ecosystem, backed by 500+ unit and integration tests at 95% coverage.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="display:grid; gap:20px">
+    <a class="next-card reveal" data-accent="sportefy" href="../sportefy/">
+      <div>
+        <div class="k">Next case study</div>
+        <h3>Sportefy — Sports Venue Booking &amp; Matchmaking</h3>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+    <div class="contact-row reveal">
+      <a class="btn btn-primary" href="mailto:z.mughal.24648@gmail.com">z.mughal.24648@gmail.com</a>
+      <a class="btn btn-ghost" href="../../assets/decks/Conek.pdf" download>Download Conek deck (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 Zohaib Ali Mughal</span>
+    <a href="../../#work">All work</a>
+    <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>
