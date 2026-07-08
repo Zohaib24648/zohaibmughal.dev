@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ETG — Enforcement-First Field-Service OS · Zohaib Ali Mughal</title>
+<meta name="description" content="Case study: ETG — an enforcement-first operations platform for an electrical, security, AV &amp; telecom group. One decision engine behind dispatch, workforce, assets and dual-sided billing.">
+<link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-accent="etg">
+
+<nav class="nav" aria-label="Main">
+  <div class="nav-inner">
+    <a class="nav-brand" href="../../">Zohaib Ali Mughal <span class="mono">/ FULL-STACK</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">MENU</button>
+    <div class="nav-links" id="nav-links">
+      <a href="../../#work">← All work</a>
+      <a href="../../assets/decks/ETG.pdf" download>Deck PDF</a>
+      <a class="nav-cta" href="../../#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="cs-hero">
+  <div class="container">
+    <span class="eyebrow"><span class="accent">04 / Field-Service Ops</span> — Case Study</span>
+    <img class="work-logo" src="../../assets/img/etg-logo-white.svg" alt="Evolution Technology Group">
+    <h1>Enforcement&#8209;First Field&#8209;Service OS</h1>
+    <p class="lede">An operations platform for an electrical, security, AV &amp; telecom group — dispatch, workforce, assets, procurement and dual-sided billing behind one decision engine.</p>
+    <div class="cs-meta">
+      <div class="cs-meta-item"><span class="k">Role</span><span class="v">Sole Architect / Full-Stack</span></div>
+      <div class="cs-meta-item"><span class="k">Timeline</span><span class="v">May 2026 — Present</span></div>
+      <div class="cs-meta-item"><span class="k">Client</span><span class="v">Australian multi-entity trade group</span></div>
+      <div class="cs-meta-item"><span class="k">Shape</span><span class="v">16-workspace Turborepo · 3 apps</span></div>
+    </div>
+    <div class="cs-hero-media reveal"><img src="../../assets/img/etg-hero.png" alt="ETG admin dashboard and technician app"></div>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="accent">The Brief</span></span>
+      <h2>Stop margin leakage before it ships.</h2>
+      <p class="lede">Unbilled supplier costs and scheduled-vs-actual billing gaps were leaking an estimated $5k a week. ETG puts one pure, unit-testable decision gate between the API and every workflow — every dispatch, closeout and invoice transition is evaluated, and every block or manager override lands in an audit trail.</p>
+    </div>
+    <div class="reveal" style="display:grid; gap:18px; max-width:44em">
+      <div class="feat"><span class="dot"></span><span>Dispatch board — 8-check enforcement gate + manager overrides</span></div>
+      <div class="feat"><span class="dot"></span><span>Workforce — timesheets, closeouts, licences, AU award engine</span></div>
+      <div class="feat"><span class="dot"></span><span>Supplier billing + scored two-hop bank reconciliation, with golden-rule gates so a job can't reach ready-to-invoice until its costs are accounted for</span></div>
+      <div class="feat"><span class="dot"></span><span>Asset / inventory register, quoting, service tickets — one 106+-model schema</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="accent">Architecture &amp; Stack</span></span>
+      <h2>One enforcement gate behind every workflow.</h2>
+    </div>
+    <div class="flow reveal">
+      <div class="fnode"><span class="t">Next.js UI</span><span class="s">Web app</span></div>
+      <span class="farrow">→</span>
+      <div class="fnode"><span class="t">Fastify · tRPC</span><span class="s">Type-safe API</span></div>
+      <span class="farrow">→</span>
+      <div class="fnode hot"><span class="t">evaluateDecision</span><span class="s">Enforcement gate</span></div>
+      <span class="farrow">→</span>
+      <div class="fnode"><span class="t">Prisma · Postgres</span><span class="s">Data</span></div>
+      <span class="farrow">→</span>
+      <div class="fnode"><span class="t">BullMQ Worker</span><span class="s">Async jobs</span></div>
+    </div>
+    <div class="arch-cols reveal">
+      <div>
+        <div class="arch-col-label">Stack</div>
+        <div class="stackrow"><span class="stacklabel">Frontend</span><div class="chips"><span class="chip">Next.js 16</span><span class="chip">React 19</span></div></div>
+        <div class="stackrow"><span class="stacklabel">Backend</span><div class="chips"><span class="chip">Fastify 5</span><span class="chip">tRPC 11</span><span class="chip">Prisma 7</span></div></div>
+        <div class="stackrow"><span class="stacklabel">Data</span><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">BullMQ</span><span class="chip">Redis</span></div></div>
+        <div class="stackrow"><span class="stacklabel">Infra</span><div class="chips"><span class="chip">Better Auth</span><span class="chip">Airwallex</span><span class="chip">Docker</span><span class="chip">Railway</span></div></div>
+      </div>
+      <div>
+        <div class="arch-col-label">Key Decisions</div>
+        <div class="decision"><span class="n">01</span><span>One shared enforcement gate (evaluateDecision) across dispatch, closeout &amp; billing — structured failure codes, audited overrides</span></div>
+        <div class="decision"><span class="n">02</span><span>Money modelled as BigInt integer cents (ex-GST)</span></div>
+        <div class="decision"><span class="n">03</span><span>Event-driven workers with dead-letter queues</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="accent">Walkthrough</span></span>
+      <h2>Across admin &amp; field.</h2>
+    </div>
+
+    <div class="walk-group reveal">
+      <div class="walk-group-label">Technician App · Mobile</div>
+      <div class="shots cols-3 phones">
+        <div class="shot"><div class="phone"><img src="../../assets/img/etg/app-accept.png" alt="ETG technician job acceptance" loading="lazy"></div><div class="shot-cap">Accept job &amp; site brief</div></div>
+        <div class="shot"><div class="phone"><img src="../../assets/img/etg/app-working.png" alt="ETG technician working view" loading="lazy"></div><div class="shot-cap">On the clock &amp; evidence</div></div>
+        <div class="shot"><div class="phone"><img src="../../assets/img/etg/app-schedule.png" alt="ETG technician schedule" loading="lazy"></div><div class="shot-cap">Upcoming schedule</div></div>
+      </div>
+    </div>
+
+    <div class="walk-group reveal">
+      <div class="walk-group-label">Admin &amp; Field · Web</div>
+      <div class="shots">
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/etg/admin-calendar.png" alt="ETG scheduling command centre" loading="lazy"></div><div class="shot-cap">Admin — scheduling command centre</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/etg/dispatch.png" alt="ETG dispatch board" loading="lazy"></div><div class="shot-cap">Dispatch board — enforcement gate live</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/etg/reconciliation.png" alt="ETG bank reconciliation" loading="lazy"></div><div class="shot-cap">Scored two-hop bank reconciliation</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/etg/tech-web-job.png" alt="ETG technician web portal" loading="lazy"></div><div class="shot-cap">Technician web portal — job view</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="impact">
+  <div class="container impact-grid reveal">
+    <div class="metrics">
+      <div class="metric"><span class="num">$300K+</span><span class="cap">Yearly leakage stopped</span></div>
+      <div class="metric"><span class="num">400+</span><span class="cap">tRPC procedures</span></div>
+      <div class="metric"><span class="num">1.5K+</span><span class="cap">Automated tests</span></div>
+    </div>
+    <p>Stops an estimated $300K+ of annual margin leakage by blocking unbillable or non-compliant work before it ships — backed by 1,200+ unit and 300+ Playwright tests across one audited decision gate.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="display:grid; gap:20px">
+    <a class="next-card reveal" data-accent="plexor" href="../plexor/">
+      <div>
+        <div class="k">Next case study</div>
+        <h3>Plexor — AI-Based Surveillance System</h3>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+    <div class="contact-row reveal">
+      <a class="btn btn-primary" href="mailto:z.mughal.24648@gmail.com">z.mughal.24648@gmail.com</a>
+      <a class="btn btn-ghost" href="../../assets/decks/ETG.pdf" download>Download ETG deck (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 Zohaib Ali Mughal</span>
+    <a href="../../#work">All work</a>
+    <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>

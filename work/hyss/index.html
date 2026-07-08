@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hyss — AV &amp; Live Events Staffing Platform · Zohaib Ali Mughal</title>
+<meta name="description" content="Case study: Hyss — a B2B live-event staffing marketplace shipping web, iOS and Android from one codebase. 93 data models, ~340 tRPC procedures, Stripe Connect payouts.">
+<link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-accent="hyss">
+
+<nav class="nav" aria-label="Main">
+  <div class="nav-inner">
+    <a class="nav-brand" href="../../">Zohaib Ali Mughal <span class="mono">/ FULL-STACK</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">MENU</button>
+    <div class="nav-links" id="nav-links">
+      <a href="../../#work">← All work</a>
+      <a href="../../assets/decks/Hyss.pdf" download>Deck PDF</a>
+      <a class="nav-cta" href="../../#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="cs-hero">
+  <div class="container">
+    <span class="eyebrow"><span class="accent">01 / Events Staffing</span> — Case Study</span>
+    <img class="work-logo" src="../../assets/img/hyss-logo-white.png" alt="Hyss">
+    <h1>AV &amp; Live Events Staffing Platform</h1>
+    <p class="lede">Event companies staff certified freelance crew — matched, scheduled, paid — across web, iOS and Android from one codebase.</p>
+    <div class="cs-meta">
+      <div class="cs-meta-item"><span class="k">Role</span><span class="v">Lead Full-Stack Engineer</span></div>
+      <div class="cs-meta-item"><span class="k">Timeline</span><span class="v">Jan 2026 — Present · retainer</span></div>
+      <div class="cs-meta-item"><span class="k">Status</span><span class="v">In production — hyss.io</span></div>
+      <div class="cs-meta-item"><span class="k">Platforms</span><span class="v">Web · iOS · Android</span></div>
+    </div>
+    <div class="cs-hero-media reveal"><img src="../../assets/img/hyss-hero.png" alt="Hyss employer dashboard and freelancer app"></div>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="accent">The Brief</span></span>
+      <h2>Staff certified crew, without the chaos.</h2>
+      <p class="lede">Event companies need to staff certified freelance crew for live events — with conflict-free scheduling, compliant pay and automated payouts — on web and mobile alike. Hyss handles the whole loop: match, schedule, work, invoice, pay.</p>
+    </div>
+    <div class="reveal" style="display:grid; gap:18px; max-width:44em">
+      <div class="feat"><span class="dot"></span><span>Wizard-driven event creation &amp; recurring shifts</span></div>
+      <div class="feat"><span class="dot"></span><span>Competency-based matching with conflict detection</span></div>
+      <div class="feat"><span class="dot"></span><span>Freelancer calendars, time-off requests &amp; bidirectional Google / Apple calendar sync</span></div>
+      <div class="feat"><span class="dot"></span><span>Stripe Connect financial core — payout onboarding, hybrid seat + usage-metered billing, per-invoice checkout links</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="accent">Architecture &amp; Stack</span></span>
+      <h2>One codebase, three platforms, end-to-end types.</h2>
+    </div>
+    <div class="flow reveal">
+      <div class="fnode"><span class="t">Turborepo</span><span class="s">Monorepo</span></div>
+      <span class="farrow">→</span>
+      <div class="fnode hot"><span class="t">Next + Capacitor</span><span class="s">Web · iOS · Android</span></div>
+      <span class="farrow">→</span>
+      <div class="fnode"><span class="t">Fastify · tRPC</span><span class="s">Type-safe API</span></div>
+      <span class="farrow">→</span>
+      <div class="fnode"><span class="t">Prisma · Supabase</span><span class="s">Postgres</span></div>
+      <span class="farrow">→</span>
+      <div class="fnode"><span class="t">Stripe Connect</span><span class="s">Payouts</span></div>
+    </div>
+    <div class="arch-cols reveal">
+      <div>
+        <div class="arch-col-label">Stack</div>
+        <div class="stackrow"><span class="stacklabel">Frontend</span><div class="chips"><span class="chip">Next.js</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Tailwind</span><span class="chip">Capacitor</span></div></div>
+        <div class="stackrow"><span class="stacklabel">Backend</span><div class="chips"><span class="chip">Node.js</span><span class="chip">Fastify</span><span class="chip">tRPC</span><span class="chip">Prisma</span><span class="chip">Zod</span><span class="chip">Supabase</span></div></div>
+        <div class="stackrow"><span class="stacklabel">Payments</span><div class="chips"><span class="chip">Stripe Connect</span><span class="chip">Stripe Billing</span></div></div>
+      </div>
+      <div>
+        <div class="arch-col-label">Key Decisions</div>
+        <div class="decision"><span class="n">01</span><span>Single codebase shipping all three platforms via Capacitor — including a custom native Android Credential Manager plugin</span></div>
+        <div class="decision"><span class="n">02</span><span>End-to-end type safety with tRPC + Zod contracts across 93 Prisma models</span></div>
+        <div class="decision"><span class="n">03</span><span>Bidirectional Google + Apple (CalDAV) calendar sync — push-channel updates, AES-256-GCM-encrypted OAuth tokens, retryable row-locked job queue</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="accent">Walkthrough</span></span>
+      <h2>Employer &amp; freelancer surfaces.</h2>
+    </div>
+
+    <div class="walk-group reveal">
+      <div class="walk-group-label">Freelancer App · Mobile</div>
+      <div class="shots cols-3 phones">
+        <div class="shot"><div class="phone"><img src="../../assets/img/hyss/fl-offers.webp" alt="Hyss freelancer job offers" loading="lazy"></div><div class="shot-cap">Job offers — confirm / decline</div></div>
+        <div class="shot"><div class="phone"><img src="../../assets/img/hyss/fl-availability.webp" alt="Hyss freelancer availability" loading="lazy"></div><div class="shot-cap">Availability &amp; time off</div></div>
+        <div class="shot"><div class="phone"><img src="../../assets/img/hyss/fl-events.webp" alt="Hyss freelancer confirmed events" loading="lazy"></div><div class="shot-cap">Confirmed events &amp; invoicing</div></div>
+      </div>
+    </div>
+
+    <div class="walk-group reveal">
+      <div class="walk-group-label">Employer · Web</div>
+      <div class="shots">
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/hyss/employer-dashboard.png" alt="Hyss employer dashboard" loading="lazy"></div><div class="shot-cap">Employer dashboard &amp; staffing</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/hyss/crew-roster.png" alt="Hyss crew roster" loading="lazy"></div><div class="shot-cap">Competency-matched crew roster</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/hyss/event-wizard.png" alt="Hyss event creation wizard" loading="lazy"></div><div class="shot-cap">Wizard-driven event creation</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/hyss/reports.png" alt="Hyss reports" loading="lazy"></div><div class="shot-cap">Reporting &amp; usage tracking</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="impact">
+  <div class="container impact-grid reveal">
+    <div class="metrics">
+      <div class="metric"><span class="num">93</span><span class="cap">Data models</span></div>
+      <div class="metric"><span class="num">~340</span><span class="cap">tRPC procedures</span></div>
+      <div class="metric"><span class="num">3</span><span class="cap">Platforms · one codebase</span></div>
+    </div>
+    <p>Hardened for production with company-enforceable TOTP multi-factor auth, idempotent Stripe webhook reconciliation, and CI running ephemeral-Postgres integration tests plus full-stack Playwright E2E on every pull request.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="display:grid; gap:20px">
+    <a class="next-card reveal" data-accent="conek" href="../conek/">
+      <div>
+        <div class="k">Next case study</div>
+        <h3>Conek — Quotes &amp; Projects Tool for A-SAFE</h3>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+    <div class="contact-row reveal">
+      <a class="btn btn-primary" href="mailto:z.mughal.24648@gmail.com">z.mughal.24648@gmail.com</a>
+      <a class="btn btn-ghost" href="../../assets/decks/Hyss.pdf" download>Download Hyss deck (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 Zohaib Ali Mughal</span>
+    <a href="../../#work">All work</a>
+    <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>
