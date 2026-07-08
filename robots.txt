@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zohaibmughal.dev/sitemap.xml
