@@ -1,0 +1,13 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+
+# Dependencies / build output (if a bundler is ever added)
+node_modules/
+dist/
+
+# Never commit secrets or private docs
+.env
+*.env
+token*
