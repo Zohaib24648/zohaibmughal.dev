@@ -11,6 +11,13 @@ Personal portfolio of **Zohaib Ali Mughal** — full-stack product engineering a
 - `assets/` — CSS, JS (vendored Lenis), images, deck PDFs, CV
 - `CNAME` — custom domain for GitHub Pages
 
+## Sources
+
+This repo holds only the built site. Its content is generated from a private sibling repo,
+`~/Desktop/Projects/Portfolio` — case studies are the source of truth for every number, deck
+PDFs are exported from the deck sources there, and the CV is the phone-redacted build. Edit
+there, copy the output here.
+
 ## Local preview
 
 ```bash
