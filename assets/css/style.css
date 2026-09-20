@@ -430,6 +430,18 @@ section { padding-block: clamp(72px, 9vw, 130px); }
 
 .timeline { display: grid; }
 
+.timeline-org {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line-2);
+  margin: 0;
+}
+.timeline-org span { opacity: 0.45; padding: 0 4px; }
+
 .timeline-item {
   display: grid;
   gap: 6px;
