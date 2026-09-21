@@ -28,7 +28,7 @@ No client data, no credentials, no unreleased screenshots.
 ## Numbers
 
 Every figure on this site traces to a dossier in `Portfolio/02-portfolio/case-studies/` and was
-last reconciled on **2026-09-21** from fresh recounts. Sportefy: 47 domain modules, 180+ `/v1`
+last reconciled on **2026-09-21** from fresh recounts. Sportefy: 48 domain modules, 190+ `/v1`
 endpoints, 823 Flutter tests. ETG: 25 packages, 1,000+ tRPC procedures, 212 Prisma models,
 30K+ tests, $5k a week of billing leakage closed.
 
