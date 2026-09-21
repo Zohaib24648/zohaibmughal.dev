@@ -35,7 +35,7 @@
     <span class="eyebrow"><span class="accent">04 / Field-Service Ops</span> — Case Study</span>
     <img class="work-logo" src="../../assets/img/etg-logo-white.svg" alt="Evolution Technology Group">
     <h1>Enforcement&#8209;First Field&#8209;Service OS</h1>
-    <p class="lede">An operations platform for an electrical, security, AV &amp; telecom group — dispatch, workforce, assets, procurement and dual-sided billing behind one decision engine.</p>
+    <p class="lede">An operations platform for an electrical, security, AV &amp; telecom group — five portals over one decision gate, spanning quote-to-cash, procurement, workforce, assets and dual-sided billing.</p>
     <div class="cs-meta">
       <div class="cs-meta-item"><span class="k">Role</span><span class="v">Software Engineer II · Slidey LLC</span></div>
         <div class="cs-meta-item"><span class="k">Scope</span><span class="v">Sole architect — greenfield build</span></div>
@@ -55,10 +55,12 @@
       <p class="lede">Unbilled supplier costs and scheduled-vs-actual billing gaps were leaking an estimated $5k a week. ETG puts one pure, unit-testable decision gate between the API and every workflow — every dispatch, closeout and invoice transition is evaluated, and every block or manager override lands in an audit trail.</p>
     </div>
     <div class="reveal" style="display:grid; gap:18px; max-width:44em">
-      <div class="feat"><span class="dot"></span><span>Dispatch board — 8-check enforcement gate + manager overrides</span></div>
-      <div class="feat"><span class="dot"></span><span>Workforce — timesheets, closeouts, licences, AU award engine</span></div>
-      <div class="feat"><span class="dot"></span><span>Supplier billing + scored two-hop bank reconciliation, with golden-rule gates so a job can't reach ready-to-invoice until its costs are accounted for</span></div>
-      <div class="feat"><span class="dot"></span><span>Asset / inventory register, quoting, service tickets — one 212-model schema</span></div>
+      <div class="feat"><span class="dot"></span><span>Five portals — ops, technician, client, subcontractor, and tokenised public links</span></div>
+      <div class="feat"><span class="dot"></span><span>Quote-to-cash — work requests, quotes, projects, field jobs, invoicing, receivables</span></div>
+      <div class="feat"><span class="dot"></span><span>Procurement — purchase orders, supplier invoices and credits, stock, scored bank reconciliation</span></div>
+      <div class="feat"><span class="dot"></span><span>Workforce — scheduling, timesheets, closeouts, licences and inductions, AU award rules</span></div>
+      <div class="feat"><span class="dot"></span><span>Assets &amp; compliance — registers, site credentials, field checklists, document control</span></div>
+      <div class="feat"><span class="dot"></span><span>Governance — approvals, alerts, enforcement events, SLA targets, audit log</span></div>
     </div>
   </div>
 </section>
@@ -102,7 +104,7 @@
   <div class="container">
     <div class="section-head reveal">
       <span class="eyebrow"><span class="accent">Walkthrough</span></span>
-      <h2>Across admin &amp; field.</h2>
+      <h2>Five portals, one rulebook.</h2>
     </div>
 
     <div class="walk-group reveal">
@@ -133,7 +135,7 @@
       <div class="metric"><span class="num">1,000+</span><span class="cap">tRPC procedures</span></div>
       <div class="metric"><span class="num">30K+</span><span class="cap">Automated tests</span></div>
     </div>
-    <p>Stops an estimated $5k a week of margin leakage by blocking unbillable or non-compliant work before it ships — backed by 30,000+ tests across 2,200+ test files, all funnelling through one audited decision gate.</p>
+    <p>Stops an estimated $5k a week of margin leakage by blocking unbillable or non-compliant work before it ships. The same gate runs behind all five portals, so field, client and back office never disagree about a job&#8217;s state — backed by 30,000+ tests across 2,200+ files.</p>
   </div>
 </section>
 
