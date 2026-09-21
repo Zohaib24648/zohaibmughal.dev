@@ -25,12 +25,16 @@ in as you use them rather than mirroring the whole library.
 Everything here is world-readable and indexed. Only the phone-redacted CV goes in `assets/cv/`.
 No client data, no credentials, no unreleased screenshots.
 
-## Known drift
+## Numbers
 
-The Sportefy page's metric block (`work/sportefy/index.html`) still shows the June 2026
-figures — 42 modules, 100+ endpoints, 414 Flutter tests. A September recount gives 47, 181 and
-823. See the **Open drift** section of `Portfolio/02-portfolio/case-studies/_INDEX.md` before
-updating: the deck sources and PDFs carry the same stale numbers and need the same pass.
+Every figure on this site traces to a dossier in `Portfolio/02-portfolio/case-studies/` and was
+last reconciled on **2026-09-21** from fresh recounts. Sportefy: 47 domain modules, 180+ `/v1`
+endpoints, 823 Flutter tests. ETG: 25 packages, 1,000+ tRPC procedures, 212 Prisma models,
+30K+ tests, $5k a week of billing leakage closed.
+
+Do not edit a number here alone. Changing one means changing six surfaces in the same sitting:
+the dossier, the CV (rebuild and republish), the deck source, the exported deck PDF,
+`decks/pages/`, and the three platform profiles.
 
 ## Don't break Pages
 
