@@ -7,13 +7,14 @@
 <meta name="description" content="Case study: Sportefy — a B2B2C sports platform live in Pakistan. Consumer Flutter app on the App Store &amp; Play Store, Next.js admin dashboard, versioned NestJS API.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://zohaibmughal.dev/work/sportefy/">
-<meta property="og:image" content="https://zohaibmughal.dev/assets/img/sportefy-hero.png">
+<meta property="og:image" content="https://zohaibmughal.dev/assets/img/og/sportefy.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://zohaibmughal.dev/work/sportefy/">
 <link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
 <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body data-accent="sportefy">
@@ -32,8 +33,8 @@
 
 <header class="cs-hero">
   <div class="container">
-    <span class="eyebrow"><span class="accent">03 / Sports Booking</span> — Case Study</span>
-    <img class="work-logo" src="../../assets/img/sportefy-logo-white.png" alt="Sportefy">
+    <span class="eyebrow"><span class="accent">04 / Sports Booking</span> — Case Study</span>
+    <img width="354" height="72" class="work-logo" src="../../assets/img/sportefy-logo-white.png" alt="Sportefy">
     <h1>Sports Venue Booking &amp; Matchmaking</h1>
     <p class="lede">A B2B2C sports platform live in Pakistan — consumer Flutter app, Next.js admin dashboard and a versioned NestJS API. Book venues, find matches, pay.</p>
     <div class="cs-meta">
@@ -43,7 +44,7 @@
       <div class="cs-meta-item"><span class="k">Status</span><span class="v">Live — App Store &amp; Play Store</span></div>
       <div class="cs-meta-item"><span class="k">Shape</span><span class="v">B2B2C · app + admin + API</span></div>
     </div>
-    <div class="cs-hero-media reveal"><img src="../../assets/img/sportefy-hero.png" alt="Sportefy consumer app and admin dashboard"></div>
+    <div class="cs-hero-media reveal"><img width="1560" height="1440" src="../../assets/img/sportefy-hero.webp" alt="Sportefy consumer app and admin dashboard"></div>
   </div>
 </header>
 
@@ -69,16 +70,25 @@
       <span class="eyebrow"><span class="accent">Architecture &amp; Stack</span></span>
       <h2>Two clients, one versioned contract.</h2>
     </div>
-    <div class="flow reveal">
-      <div class="fnode"><span class="t">Clients</span><span class="s">Flutter + Next.js admin</span></div>
-      <span class="farrow">→</span>
-      <div class="fnode"><span class="t">/v1 REST</span><span class="s">OpenAPI gates</span></div>
-      <span class="farrow">→</span>
-      <div class="fnode hot"><span class="t">NestJS · CQRS</span><span class="s">Domain core</span></div>
-      <span class="farrow">→</span>
-      <div class="fnode"><span class="t">Prisma · Postgres</span><span class="s">Data</span></div>
-      <span class="farrow">→</span>
-      <div class="fnode"><span class="t">Supabase</span><span class="s">Realtime · RLS</span></div>
+    <div class="arch reveal" role="list" aria-label="Architecture layers">
+      <div class="layer" role="listitem"><span class="layer-label">Clients</span><div class="layer-nodes">
+        <div class="lnode"><span class="t">Flutter app</span><span class="s">iOS + Android · BLoC</span></div>
+        <div class="lnode"><span class="t">Next.js 16 admin</span><span class="s">Ops dashboard</span></div>
+      </div></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer" role="listitem"><span class="layer-label">Contract</span><div class="layer-nodes">
+        <div class="lnode"><span class="t">/v1 REST</span><span class="s">Additive-only · OpenAPI gates</span></div>
+      </div></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer" role="listitem"><span class="layer-label">Core</span><div class="layer-nodes">
+        <div class="lnode hot"><span class="t">NestJS 11</span><span class="s">48 modules · layered use-cases</span></div>
+      </div></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer" role="listitem"><span class="layer-label">Data</span><div class="layer-nodes">
+        <div class="lnode"><span class="t">Prisma 7 · PostgreSQL</span><span class="s">On Supabase</span></div>
+        <div class="lnode"><span class="t">Supabase Realtime</span><span class="s">Match chat · RLS</span></div>
+        <div class="lnode"><span class="t">Paymob</span><span class="s">Payments</span></div>
+      </div></div>
     </div>
     <div class="arch-cols reveal">
       <div>
@@ -108,17 +118,17 @@
     <div class="walk-group reveal">
       <div class="walk-group-label">Consumer App · Flutter</div>
       <div class="shots cols-3 phones">
-        <div class="shot"><div class="phone"><img src="../../assets/img/sportefy/app-home.png" alt="Sportefy app home — credits and nearby venues" loading="lazy"></div><div class="shot-cap">Home — credits &amp; nearby venues</div></div>
-        <div class="shot"><div class="phone"><img src="../../assets/img/sportefy/app-booking-details.png" alt="Sportefy slot booking and match setup" loading="lazy"></div><div class="shot-cap">Slot booking &amp; match setup</div></div>
-        <div class="shot"><div class="phone"><img src="../../assets/img/sportefy/app-checkout.png" alt="Sportefy checkout with credit pricing" loading="lazy"></div><div class="shot-cap">Checkout — credit pricing</div></div>
+        <div class="shot"><div class="phone"><img width="600" height="1277" src="../../assets/img/sportefy/app-home.webp" alt="Sportefy app home — credits and nearby venues" loading="lazy"></div><div class="shot-cap">Home — credits &amp; nearby venues</div></div>
+        <div class="shot"><div class="phone"><img width="600" height="1277" src="../../assets/img/sportefy/app-booking-details.webp" alt="Sportefy slot booking and match setup" loading="lazy"></div><div class="shot-cap">Slot booking &amp; match setup</div></div>
+        <div class="shot"><div class="phone"><img width="600" height="1277" src="../../assets/img/sportefy/app-checkout.webp" alt="Sportefy checkout with credit pricing" loading="lazy"></div><div class="shot-cap">Checkout — credit pricing</div></div>
       </div>
     </div>
 
     <div class="walk-group reveal">
       <div class="walk-group-label">Admin Dashboard · Web</div>
       <div class="shots">
-        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/sportefy/admin-manual-bookings.png" alt="Sportefy manual bookings and reconciliation" loading="lazy"></div><div class="shot-cap">Manual bookings &amp; reconciliation</div></div>
-        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/sportefy/admin-available-slots.png" alt="Sportefy availability and slot management" loading="lazy"></div><div class="shot-cap">Availability &amp; slot management</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="596" src="../../assets/img/sportefy/admin-manual-bookings.webp" alt="Sportefy manual bookings and reconciliation" loading="lazy"></div><div class="shot-cap">Manual bookings &amp; reconciliation</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="596" src="../../assets/img/sportefy/admin-available-slots.webp" alt="Sportefy availability and slot management" loading="lazy"></div><div class="shot-cap">Availability &amp; slot management</div></div>
       </div>
     </div>
 
@@ -139,10 +149,10 @@
 
 <section>
   <div class="container" style="display:grid; gap:20px">
-    <a class="next-card reveal" data-accent="etg" href="../etg/">
+    <a class="next-card reveal" data-accent="plexor" href="../plexor/">
       <div>
         <div class="k">Next case study</div>
-        <h3>ETG — Enforcement-First Field-Service OS</h3>
+        <h3>Plexor — AI-Based Surveillance System</h3>
       </div>
       <span class="arrow">→</span>
     </a>

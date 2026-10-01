@@ -7,13 +7,14 @@
 <meta name="description" content="Case study: Conek — an internal sales platform for A-SAFE. Quote to sales order to invoice over event-driven microservices, with sub-100ms inter-service latency and 95% test coverage.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://zohaibmughal.dev/work/conek/">
-<meta property="og:image" content="https://zohaibmughal.dev/assets/img/conek-hero.png">
+<meta property="og:image" content="https://zohaibmughal.dev/assets/img/og/conek.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://zohaibmughal.dev/work/conek/">
 <link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
 <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body data-accent="conek">
@@ -32,8 +33,8 @@
 
 <header class="cs-hero">
   <div class="container">
-    <span class="eyebrow"><span class="accent">02 / Sales Operations</span> — Case Study</span>
-    <img class="work-logo" src="../../assets/img/conek-logo-white.svg" alt="Conek">
+    <span class="eyebrow"><span class="accent">03 / Sales Operations</span> — Case Study</span>
+    <img width="154" height="27" class="work-logo" src="../../assets/img/conek-logo-white.svg" alt="Conek">
     <h1>Quotes &amp; Projects Tool for A&#8209;SAFE</h1>
     <p class="lede">An internal sales platform — quote to sales order to invoice — wired into the surrounding tool ecosystem: CRM, Drawing Tool and Route 66.</p>
     <div class="cs-meta">
@@ -43,7 +44,7 @@
       <div class="cs-meta-item"><span class="k">Client</span><span class="v">A-Safe Digital (internal platform)</span></div>
       <div class="cs-meta-item"><span class="k">Shape</span><span class="v">Event-driven microservices</span></div>
     </div>
-    <div class="cs-hero-media reveal"><img src="../../assets/img/conek-hero.png" alt="Conek quotes and projects dashboards"></div>
+    <div class="cs-hero-media reveal"><img width="1560" height="1440" src="../../assets/img/conek-hero.webp" alt="Conek quotes and projects dashboards"></div>
   </div>
 </header>
 
@@ -68,16 +69,24 @@
       <span class="eyebrow"><span class="accent">Architecture &amp; Stack</span></span>
       <h2>Event-driven services, type-safe contracts.</h2>
     </div>
-    <div class="flow reveal">
-      <div class="fnode"><span class="t">Next.js Client</span><span class="s">Sales UI</span></div>
-      <span class="farrow">→</span>
-      <div class="fnode"><span class="t">Fastify API</span><span class="s">Gateway</span></div>
-      <span class="farrow">→</span>
-      <div class="fnode hot"><span class="t">NATS JetStream</span><span class="s">Event bus</span></div>
-      <span class="farrow">→</span>
-      <div class="fnode"><span class="t">Domain Services</span><span class="s">Clean architecture</span></div>
-      <span class="farrow">→</span>
-      <div class="fnode"><span class="t">AWS ECS</span><span class="s">Lambda · S3</span></div>
+    <div class="arch reveal" role="list" aria-label="Architecture layers">
+      <div class="layer" role="listitem"><span class="layer-label">Client</span><div class="layer-nodes">
+        <div class="lnode"><span class="t">Next.js client</span><span class="s">Sales UI</span></div>
+      </div></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer" role="listitem"><span class="layer-label">Gateway</span><div class="layer-nodes">
+        <div class="lnode"><span class="t">Fastify API</span><span class="s">Gateway</span></div>
+      </div></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer" role="listitem"><span class="layer-label">Events</span><div class="layer-nodes">
+        <div class="lnode hot"><span class="t">NATS JetStream</span><span class="s">Event bus</span></div>
+      </div></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer" role="listitem"><span class="layer-label">Services</span><div class="layer-nodes">
+        <div class="lnode"><span class="t">Domain services</span><span class="s">Clean architecture</span></div>
+        <div class="lnode"><span class="t">AWS ECS</span><span class="s">Lambda · S3</span></div>
+        <div class="lnode"><span class="t">Integrations</span><span class="s">CRM · Drawing Tool · Route 66</span></div>
+      </div></div>
     </div>
     <div class="arch-cols reveal">
       <div>
@@ -106,9 +115,9 @@
     <div class="walk-group reveal">
       <div class="walk-group-label">Sales Platform · Web</div>
       <div class="shots">
-        <div class="shot" style="grid-column:1/-1"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/conek/projects.png" alt="Conek projects and quote pipeline" loading="lazy"></div><div class="shot-cap">Projects &amp; quote pipeline</div></div>
-        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/conek/quote-detail.png" alt="Conek quote detail and line items" loading="lazy"></div><div class="shot-cap">Quote detail &amp; line items</div></div>
-        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/conek/pdf-wizard.png" alt="Conek quote PDF builder" loading="lazy"></div><div class="shot-cap">Quote-PDF builder</div></div>
+        <div class="shot" style="grid-column:1/-1"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="695" src="../../assets/img/conek/projects.webp" alt="Conek projects and quote pipeline" loading="lazy"></div><div class="shot-cap">Projects &amp; quote pipeline</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="695" src="../../assets/img/conek/quote-detail.webp" alt="Conek quote detail and line items" loading="lazy"></div><div class="shot-cap">Quote detail &amp; line items</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="695" src="../../assets/img/conek/pdf-wizard.webp" alt="Conek quote PDF builder" loading="lazy"></div><div class="shot-cap">Quote-PDF builder</div></div>
       </div>
     </div>
   </div>
@@ -121,7 +130,7 @@
       <div class="metric"><span class="num">500+</span><span class="cap">Tests · 95% coverage</span></div>
       <div class="metric"><span class="num">0</span><span class="cap">Critical prod regressions</span></div>
     </div>
-    <p>An event-driven architecture over NATS JetStream kept services fast and decoupled — quote-to-cash flowing reliably across the A-Safe tool ecosystem, backed by 500+ unit and integration tests at 95% coverage.</p>
+    <p>An event-driven architecture over NATS JetStream kept services fast and decoupled — quote-to-cash flowing reliably across the A&#8209;SAFE tool ecosystem, backed by 500+ unit and integration tests at 95% coverage.</p>
   </div>
 </section>
 

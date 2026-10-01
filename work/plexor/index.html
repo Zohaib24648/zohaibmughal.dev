@@ -7,13 +7,14 @@
 <meta name="description" content="Case study: Plexor — computer-vision loss prevention for retail. Theft, POS fraud and loitering flagged in real time across 100+ stores with ~700ms inference.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://zohaibmughal.dev/work/plexor/">
-<meta property="og:image" content="https://zohaibmughal.dev/assets/img/plexor-hero.png">
+<meta property="og:image" content="https://zohaibmughal.dev/assets/img/og/plexor.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://zohaibmughal.dev/work/plexor/">
 <link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
 <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body data-accent="plexor">
@@ -33,7 +34,7 @@
 <header class="cs-hero">
   <div class="container">
     <span class="eyebrow"><span class="accent">05 / AI Surveillance</span> — Case Study</span>
-    <img class="work-logo" src="../../assets/img/plexor-logo-white.svg" alt="Plexor">
+    <img width="239" height="48" class="work-logo" src="../../assets/img/plexor-logo-white.svg" alt="Plexor">
     <h1>AI-Based Surveillance System</h1>
     <p class="lede">Computer-vision loss prevention for retail — theft, POS fraud and loitering, flagged in real time and routed to the managers who can act on it.</p>
     <div class="cs-meta">
@@ -42,7 +43,7 @@
       <div class="cs-meta-item"><span class="k">Domain</span><span class="v">Retail loss prevention · CV</span></div>
       <div class="cs-meta-item"><span class="k">Shape</span><span class="v">Realtime vision pipeline</span></div>
     </div>
-    <div class="cs-hero-media reveal"><img src="../../assets/img/plexor-hero.png" alt="Plexor surveillance dashboards"></div>
+    <div class="cs-hero-media reveal"><img width="1560" height="1440" src="../../assets/img/plexor-hero.webp" alt="Plexor surveillance dashboards"></div>
   </div>
 </header>
 
@@ -68,16 +69,23 @@
       <span class="eyebrow"><span class="accent">Architecture &amp; Stack</span></span>
       <h2>Realtime vision pipeline, role-scoped delivery.</h2>
     </div>
-    <div class="flow reveal">
-      <div class="fnode"><span class="t">Store Cameras</span><span class="s">Multi-camera NVR</span></div>
-      <span class="farrow">→</span>
-      <div class="fnode"><span class="t">AWS KVS</span><span class="s">Stream ingest</span></div>
-      <span class="farrow">→</span>
-      <div class="fnode hot"><span class="t">CV Inference</span><span class="s">PyTorch · OpenCV · OpenAI</span></div>
-      <span class="farrow">→</span>
-      <div class="fnode"><span class="t">Event Pipeline</span><span class="s">Alert routing</span></div>
-      <span class="farrow">→</span>
-      <div class="fnode"><span class="t">Dashboards</span><span class="s">Role-based access</span></div>
+    <div class="arch reveal" role="list" aria-label="Architecture layers">
+      <div class="layer" role="listitem"><span class="layer-label">Edge</span><div class="layer-nodes">
+        <div class="lnode"><span class="t">Store cameras</span><span class="s">Multi-camera NVR</span></div>
+      </div></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer" role="listitem"><span class="layer-label">Ingest</span><div class="layer-nodes">
+        <div class="lnode"><span class="t">AWS KVS</span><span class="s">Stream ingest</span></div>
+      </div></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer" role="listitem"><span class="layer-label">Inference</span><div class="layer-nodes">
+        <div class="lnode hot"><span class="t">CV inference on EKS</span><span class="s">PyTorch · OpenCV · OpenAI</span></div>
+      </div></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer" role="listitem"><span class="layer-label">Delivery</span><div class="layer-nodes">
+        <div class="lnode"><span class="t">Event pipeline</span><span class="s">Alert routing</span></div>
+        <div class="lnode"><span class="t">Dashboards</span><span class="s">Store, district &amp; admin</span></div>
+      </div></div>
     </div>
     <div class="arch-cols reveal">
       <div>
@@ -106,12 +114,12 @@
     <div class="walk-group reveal">
       <div class="walk-group-label">Loss-Prevention Console · Web</div>
       <div class="shots">
-        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/plexor/screen-recordings.png" alt="Plexor live recording streams" loading="lazy"></div><div class="shot-cap">Live recording streams</div></div>
-        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/plexor/cameras.png" alt="Plexor multi-camera grid" loading="lazy"></div><div class="shot-cap">Multi-camera live grid</div></div>
-        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/plexor/theft.png" alt="Plexor theft queue" loading="lazy"></div><div class="shot-cap">Theft queue &amp; AI validation</div></div>
-        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/plexor/phone-usage-detail.png" alt="Plexor phone usage detection" loading="lazy"></div><div class="shot-cap">Phone-usage detection &amp; review</div></div>
-        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/plexor/visual-pos.png" alt="Plexor visual POS" loading="lazy"></div><div class="shot-cap">Visual POS &amp; under-ringing flags</div></div>
-        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/plexor/flash-chat.png" alt="Plexor Flash AI assistant" loading="lazy"></div><div class="shot-cap">Flash — AI loss-prevention assistant</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="691" src="../../assets/img/plexor/screen-recordings.webp" alt="Plexor live recording streams" loading="lazy"></div><div class="shot-cap">Live recording streams</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="691" src="../../assets/img/plexor/cameras.webp" alt="Plexor multi-camera grid" loading="lazy"></div><div class="shot-cap">Multi-camera live grid</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="691" src="../../assets/img/plexor/theft.webp" alt="Plexor theft queue" loading="lazy"></div><div class="shot-cap">Theft queue &amp; AI validation</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="691" src="../../assets/img/plexor/phone-usage-detail.webp" alt="Plexor phone usage detection" loading="lazy"></div><div class="shot-cap">Phone-usage detection &amp; review</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="691" src="../../assets/img/plexor/visual-pos.webp" alt="Plexor visual POS" loading="lazy"></div><div class="shot-cap">Visual POS &amp; under-ringing flags</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="691" src="../../assets/img/plexor/flash-chat.webp" alt="Plexor Flash AI assistant" loading="lazy"></div><div class="shot-cap">Flash — AI loss-prevention assistant</div></div>
       </div>
     </div>
   </div>
@@ -130,10 +138,10 @@
 
 <section>
   <div class="container" style="display:grid; gap:20px">
-    <a class="next-card reveal" data-accent="hyss" href="../hyss/">
+    <a class="next-card reveal" data-accent="etg" href="../etg/">
       <div>
         <div class="k">Next case study</div>
-        <h3>Hyss — AV &amp; Live Events Staffing Platform</h3>
+        <h3>ETG — Enforcement&#8209;First Field&#8209;Service OS</h3>
       </div>
       <span class="arrow">→</span>
     </a>

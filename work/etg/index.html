@@ -7,13 +7,14 @@
 <meta name="description" content="Case study: ETG — an enforcement-first operations platform for an electrical, security, AV &amp; telecom group. One decision engine behind dispatch, workforce, assets and dual-sided billing.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://zohaibmughal.dev/work/etg/">
-<meta property="og:image" content="https://zohaibmughal.dev/assets/img/etg-hero.png">
+<meta property="og:image" content="https://zohaibmughal.dev/assets/img/og/etg.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://zohaibmughal.dev/work/etg/">
 <link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
 <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body data-accent="etg">
@@ -32,8 +33,8 @@
 
 <header class="cs-hero">
   <div class="container">
-    <span class="eyebrow"><span class="accent">04 / Field-Service Ops</span> — Case Study</span>
-    <img class="work-logo" src="../../assets/img/etg-logo-white.svg" alt="Evolution Technology Group">
+    <span class="eyebrow"><span class="accent">01 / Field-Service Ops</span> — Case Study</span>
+    <img width="228" height="60" class="work-logo" src="../../assets/img/etg-logo-white.svg" alt="Evolution Technology Group">
     <h1>Enforcement&#8209;First Field&#8209;Service OS</h1>
     <p class="lede">An operations platform for an electrical, security, AV &amp; telecom group — five portals over one decision gate, spanning quote-to-cash, procurement, workforce, assets and dual-sided billing.</p>
     <div class="cs-meta">
@@ -43,7 +44,7 @@
       <div class="cs-meta-item"><span class="k">Client</span><span class="v">Australian multi-entity trade group</span></div>
       <div class="cs-meta-item"><span class="k">Shape</span><span class="v">3 apps · 25 packages</span></div>
     </div>
-    <div class="cs-hero-media reveal"><img src="../../assets/img/etg-hero.png" alt="ETG admin dashboard and technician app"></div>
+    <div class="cs-hero-media reveal"><img width="1560" height="1440" src="../../assets/img/etg-hero.webp" alt="ETG admin dashboard and technician app"></div>
   </div>
 </header>
 
@@ -71,16 +72,24 @@
       <span class="eyebrow"><span class="accent">Architecture &amp; Stack</span></span>
       <h2>One enforcement gate behind every workflow.</h2>
     </div>
-    <div class="flow reveal">
-      <div class="fnode"><span class="t">Next.js UI</span><span class="s">Web app</span></div>
-      <span class="farrow">→</span>
-      <div class="fnode"><span class="t">Fastify · tRPC</span><span class="s">Type-safe API</span></div>
-      <span class="farrow">→</span>
-      <div class="fnode hot"><span class="t">evaluateDecision</span><span class="s">Enforcement gate</span></div>
-      <span class="farrow">→</span>
-      <div class="fnode"><span class="t">Prisma · Postgres</span><span class="s">Data</span></div>
-      <span class="farrow">→</span>
-      <div class="fnode"><span class="t">BullMQ Worker</span><span class="s">Async jobs</span></div>
+    <div class="arch reveal" role="list" aria-label="Architecture layers">
+      <div class="layer" role="listitem"><span class="layer-label">Clients</span><div class="layer-nodes">
+        <div class="lnode"><span class="t">Web portals</span><span class="s">Next.js 16 · React 19</span></div>
+        <div class="lnode"><span class="t">Technician mobile</span><span class="s">Accept, clock on, close out</span></div>
+      </div></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer" role="listitem"><span class="layer-label">API</span><div class="layer-nodes">
+        <div class="lnode"><span class="t">Fastify 5 · tRPC 11</span><span class="s">Type-safe API · Better Auth</span></div>
+      </div></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer" role="listitem"><span class="layer-label">Gate</span><div class="layer-nodes">
+        <div class="lnode hot"><span class="t">evaluateDecision()</span><span class="s">One gate: dispatch, closeout, billing</span></div>
+      </div></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer" role="listitem"><span class="layer-label">Data &amp; jobs</span><div class="layer-nodes">
+        <div class="lnode"><span class="t">Prisma 7 · PostgreSQL</span><span class="s">BigInt cents, ex-GST</span></div>
+        <div class="lnode"><span class="t">BullMQ worker · Redis</span><span class="s">Reconciliation sweeps · DLQ</span></div>
+      </div></div>
     </div>
     <div class="arch-cols reveal">
       <div>
@@ -110,19 +119,19 @@
     <div class="walk-group reveal">
       <div class="walk-group-label">Technician App · Mobile</div>
       <div class="shots cols-3 phones">
-        <div class="shot"><div class="phone"><img src="../../assets/img/etg/app-accept.png" alt="ETG technician job acceptance" loading="lazy"></div><div class="shot-cap">Accept job &amp; site brief</div></div>
-        <div class="shot"><div class="phone"><img src="../../assets/img/etg/app-working.png" alt="ETG technician working view" loading="lazy"></div><div class="shot-cap">On the clock &amp; evidence</div></div>
-        <div class="shot"><div class="phone"><img src="../../assets/img/etg/app-schedule.png" alt="ETG technician schedule" loading="lazy"></div><div class="shot-cap">Upcoming schedule</div></div>
+        <div class="shot"><div class="phone"><img width="400" height="867" src="../../assets/img/etg/app-accept.webp" alt="ETG technician job acceptance" loading="lazy"></div><div class="shot-cap">Accept job &amp; site brief</div></div>
+        <div class="shot"><div class="phone"><img width="400" height="867" src="../../assets/img/etg/app-working.webp" alt="ETG technician working view" loading="lazy"></div><div class="shot-cap">On the clock &amp; evidence</div></div>
+        <div class="shot"><div class="phone"><img width="400" height="867" src="../../assets/img/etg/app-schedule.webp" alt="ETG technician schedule" loading="lazy"></div><div class="shot-cap">Upcoming schedule</div></div>
       </div>
     </div>
 
     <div class="walk-group reveal">
       <div class="walk-group-label">Admin &amp; Field · Web</div>
       <div class="shots">
-        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/etg/admin-calendar.png" alt="ETG scheduling command centre" loading="lazy"></div><div class="shot-cap">Admin — scheduling command centre</div></div>
-        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/etg/admin-dashboard.png" alt="ETG admin dashboard" loading="lazy"></div><div class="shot-cap">Admin dashboard — live operations</div></div>
-        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/etg/admin-invoice.png" alt="ETG invoicing" loading="lazy"></div><div class="shot-cap">Invoicing — dual-sided billing</div></div>
-        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img src="../../assets/img/etg/tech-web-job.png" alt="ETG technician web portal" loading="lazy"></div><div class="shot-cap">Technician web portal — job view</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="622" src="../../assets/img/etg/admin-calendar.webp" alt="ETG scheduling command centre" loading="lazy"></div><div class="shot-cap">Admin — scheduling command centre</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="622" src="../../assets/img/etg/admin-dashboard.webp" alt="ETG admin dashboard" loading="lazy"></div><div class="shot-cap">Admin dashboard — live operations</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="622" src="../../assets/img/etg/admin-invoice.webp" alt="ETG invoicing" loading="lazy"></div><div class="shot-cap">Invoicing — dual-sided billing</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="622" src="../../assets/img/etg/tech-web-job.webp" alt="ETG technician web portal" loading="lazy"></div><div class="shot-cap">Technician web portal — job view</div></div>
       </div>
     </div>
   </div>
@@ -131,7 +140,7 @@
 <section class="impact">
   <div class="container impact-grid reveal">
     <div class="metrics">
-      <div class="metric"><span class="num">$5K/wk</span><span class="cap">Billing leakage closed</span></div>
+      <div class="metric"><span class="num">$5k/wk</span><span class="cap">Billing leakage closed</span></div>
       <div class="metric"><span class="num">1,000+</span><span class="cap">tRPC procedures</span></div>
       <div class="metric"><span class="num">30K+</span><span class="cap">Automated tests</span></div>
     </div>
@@ -141,10 +150,10 @@
 
 <section>
   <div class="container" style="display:grid; gap:20px">
-    <a class="next-card reveal" data-accent="plexor" href="../plexor/">
+    <a class="next-card reveal" data-accent="hyss" href="../hyss/">
       <div>
         <div class="k">Next case study</div>
-        <h3>Plexor — AI-Based Surveillance System</h3>
+        <h3>Hyss — AV &amp; Live Events Staffing Platform</h3>
       </div>
       <span class="arrow">→</span>
     </a>
