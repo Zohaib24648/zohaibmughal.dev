@@ -426,6 +426,59 @@ section { padding-block: clamp(72px, 9vw, 130px); }
   .work-media { order: -1; }
 }
 
+/* ---------- Personal projects (below the case studies) ---------- */
+
+.projects { margin-top: clamp(72px, 9vw, 120px); }
+
+.projects-head { display: grid; gap: 14px; margin-bottom: clamp(28px, 4vw, 44px); }
+
+.projects-head h3 { font-size: clamp(26px, 3.2vw, 38px); }
+
+.project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(18px, 2.5vw, 28px); }
+
+.project-card {
+  --accent-soft: rgba(255, 255, 255, 0.06);
+  display: grid;
+  gap: 16px;
+  align-content: start;
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: clamp(22px, 3vw, 34px);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+a.project-card:hover { border-color: var(--line-2); transform: translateY(-3px); }
+.js a.project-card.reveal.in:hover { transform: translateY(-3px); }
+a.project-card:focus-visible { outline-offset: 4px; }
+
+.project-kind {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.project-card h4 {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: clamp(19px, 2vw, 23px);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.project-card p { color: var(--text-2); line-height: 1.55; }
+
+.project-facts { display: flex; flex-wrap: wrap; gap: 8px 22px; font-size: 14px; color: var(--text-3); }
+.project-facts b { font-family: var(--font-head); font-weight: 600; font-size: 18px; color: var(--text); margin-right: 4px; }
+
+.project-card .work-link { margin-top: 4px; }
+.work-link.muted { color: var(--text-4); }
+
+@media (max-width: 760px) { .project-grid { grid-template-columns: 1fr; } }
+
 /* ---------- Skills ---------- */
 
 .stackrow {
