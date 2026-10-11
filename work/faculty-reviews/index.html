@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Faculty Reviews · Zohaib Ali Mughal</title>
+<meta name="description" content="Case study: course and instructor reviews for IBA Karachi students. A Flutter app and a React web app over one Node.js, Express and MongoDB API.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://zohaibmughal.dev/work/faculty-reviews/">
+<meta property="og:image" content="https://zohaibmughal.dev/assets/img/og/home.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://zohaibmughal.dev/work/faculty-reviews/">
+<link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-accent="faculty">
+
+<nav class="nav" aria-label="Main">
+  <div class="nav-inner">
+    <a class="nav-brand" href="../../">Zohaib Ali Mughal <span class="mono">/ FULL-STACK</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">MENU</button>
+    <div class="nav-links" id="nav-links">
+      <a href="../../#projects">← All projects</a>
+      <a href="https://github.com/Zohaib24648/faculty-reviews" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="nav-cta" href="../../#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="cs-hero">
+  <div class="container">
+    <span class="eyebrow"><span class="accent">University team project / Reviews platform</span> · Case Study</span>
+    <h1>Faculty Reviews</h1>
+    <p class="lede">Course and instructor reviews for IBA Karachi students: a Flutter app and a React web app over one Node.js and MongoDB API.</p>
+    <div class="cs-meta">
+      <div class="cs-meta-item"><span class="k">Role</span><span class="v">Three-person university team</span></div>
+      <div class="cs-meta-item"><span class="k">My part</span><span class="v">API, Flutter app, most of the web app</span></div>
+      <div class="cs-meta-item"><span class="k">Timeline</span><span class="v">Feb 2024 to Sep 2024</span></div>
+      <div class="cs-meta-item"><span class="k">Shape</span><span class="v">2 clients · 1 API</span></div>
+      <div class="cs-meta-item"><span class="k">API</span><span class="v">50 endpoints · 6 models</span></div>
+      <div class="cs-meta-item"><span class="k">In-app name</span><span class="v">AcademiQ</span></div>
+    </div>
+    <div class="cs-hero-media reveal"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="691" src="../../assets/img/faculty-reviews/web-teachers.webp" alt="Instructor directory with search in the React web app"></div></div>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="accent">The Brief</span></span>
+      <h2>Honest reviews, one per student per course.</h2>
+      <p class="lede">Students choosing courses rely on word of mouth. Faculty Reviews gives them structured ratings and discussion, with rules that keep it fair: one rating per student per instructor and course, and moderation built in.</p>
+    </div>
+    <div class="reveal" style="display:grid; gap:18px; max-width:44em">
+      <div class="feat"><span class="dot"></span><span>Sign-up with a 5-digit ERP number; bcrypt-hashed passwords and 10-day tokens</span></div>
+      <div class="feat"><span class="dot"></span><span>Four 0-to-5 ratings per instructor per course, limited to one per student by a compound unique index</span></div>
+      <div class="feat"><span class="dot"></span><span>Threaded, optionally anonymous comments with upvotes and downvotes, one vote per user</span></div>
+      <div class="feat"><span class="dot"></span><span>A discussion feed with text search over posts, and saved comments, instructors and courses</span></div>
+      <div class="feat"><span class="dot"></span><span>User, Moderator and Admin roles enforced by the API</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="accent">Architecture &amp; Stack</span></span>
+      <h2>Two clients, one role-checked API.</h2>
+    </div>
+    <div class="arch reveal" role="list" aria-label="Architecture layers">
+      <div class="layer" role="listitem"><span class="layer-label">Clients</span><div class="layer-nodes">
+        <div class="lnode"><span class="t">Flutter app</span><span class="s">Riverpod · dio</span></div>
+        <div class="lnode"><span class="t">React web app</span><span class="s">Redux Toolkit · MUI</span></div>
+      </div></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer" role="listitem"><span class="layer-label">API</span><div class="layer-nodes">
+        <div class="lnode hot"><span class="t">Express</span><span class="s">JWT auth · role checks · 50 endpoints</span></div>
+      </div></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer" role="listitem"><span class="layer-label">Data</span><div class="layer-nodes">
+        <div class="lnode"><span class="t">MongoDB</span><span class="s">Mongoose · 6 models</span></div>
+      </div></div>
+    </div>
+    <div class="arch-cols reveal">
+      <div>
+        <div class="arch-col-label">Stack</div>
+        <div class="stackrow"><span class="stacklabel">Mobile</span><div class="chips"><span class="chip">Flutter</span><span class="chip">Riverpod</span><span class="chip">dio</span></div></div>
+        <div class="stackrow"><span class="stacklabel">Web</span><div class="chips"><span class="chip">React 18</span><span class="chip">Redux Toolkit</span><span class="chip">MUI 5</span><span class="chip">Formik</span></div></div>
+        <div class="stackrow"><span class="stacklabel">Backend</span><div class="chips"><span class="chip">Node.js</span><span class="chip">Express 4</span><span class="chip">JWT</span><span class="chip">bcrypt</span></div></div>
+        <div class="stackrow"><span class="stacklabel">Data</span><div class="chips"><span class="chip">MongoDB</span><span class="chip">Mongoose 8</span></div></div>
+      </div>
+      <div>
+        <div class="arch-col-label">Key Decisions</div>
+        <div class="decision"><span class="n">01</span><span>Role checks live in the API (User, Moderator and Admin middleware on the routes), not only in the clients</span></div>
+        <div class="decision"><span class="n">02</span><span>One rating per student, instructor and course, enforced by the database with a compound unique index</span></div>
+        <div class="decision"><span class="n">03</span><span>Per-user vote lists on comments, so nobody can vote twice</span></div>
+        <div class="decision"><span class="n">04</span><span>Comments and posts are soft-deleted, so moderation is reversible</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="accent">Walkthrough</span></span>
+      <h2>Inside the product.</h2>
+      <p class="lede">Screenshots from a local run on fictional demo data.</p>
+    </div>
+    <div class="walk-group reveal">
+      <div class="walk-group-label">Web app · React</div>
+      <div class="shots">
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="691" src="../../assets/img/faculty-reviews/web-teacher-profile.webp" alt="Instructor profile with department and courses" loading="lazy"></div><div class="shot-cap">Instructor profile and courses taught</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="691" src="../../assets/img/faculty-reviews/web-post-thread.webp" alt="Discussion post with two replies and votes" loading="lazy"></div><div class="shot-cap">Discussion thread with comments</div></div>
+      </div>
+    </div>
+    <div class="walk-group reveal">
+      <div class="walk-group-label">Mobile app · Flutter</div>
+      <div class="shots cols-3 phones">
+        <div class="shot"><div class="phone"><img width="600" height="1300" src="../../assets/img/faculty-reviews/app-teacher-ratings.webp" alt="Instructor ratings for attendance, grading, workload and learning" loading="lazy"></div><div class="shot-cap">Four-part instructor ratings</div></div>
+        <div class="shot"><div class="phone"><img width="600" height="1300" src="../../assets/img/faculty-reviews/app-teacher-reviews.webp" alt="Student reviews of an instructor with vote counts" loading="lazy"></div><div class="shot-cap">Student reviews with votes</div></div>
+        <div class="shot"><div class="phone"><img width="600" height="1300" src="../../assets/img/faculty-reviews/app-feed.webp" alt="Discussion feed with posts, votes and reply counts" loading="lazy"></div><div class="shot-cap">Discussion feed with votes and replies</div></div>
+        <div class="shot"><div class="phone"><img width="600" height="1300" src="../../assets/img/faculty-reviews/app-post-thread.webp" alt="A post with two replies" loading="lazy"></div><div class="shot-cap">Post thread with replies</div></div>
+        <div class="shot"><div class="phone"><img width="600" height="1300" src="../../assets/img/faculty-reviews/app-create-post.webp" alt="New post form with visibility and anonymous toggle" loading="lazy"></div><div class="shot-cap">New post, with visibility and anonymity</div></div>
+        <div class="shot"><div class="phone"><img width="600" height="1300" src="../../assets/img/faculty-reviews/app-login.webp" alt="Login screen with an ERP number" loading="lazy"></div><div class="shot-cap">Sign in with an ERP number</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="impact">
+  <div class="container impact-grid reveal">
+    <div class="metrics">
+      <div class="metric"><span class="num">50</span><span class="cap">API endpoints</span></div>
+      <div class="metric"><span class="num">6</span><span class="cap">Data models</span></div>
+      <div class="metric"><span class="num">11</span><span class="cap">Flutter screens</span></div>
+    </div>
+    <p>Built in a three-person team: I wrote the API, the Flutter app and most of the React web app.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="display:grid; gap:20px">
+    <a class="next-card reveal" data-accent="voice" href="../voice-intake/">
+      <div>
+        <div class="k">Next project</div>
+        <h3>Voice AI Patient-Intake Agent</h3>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+    <div class="contact-row reveal">
+      <a class="btn btn-primary" href="mailto:z.mughal.24648@gmail.com">z.mughal.24648@gmail.com</a>
+      <a class="btn btn-ghost" href="https://github.com/Zohaib24648/faculty-reviews" target="_blank" rel="noopener">View the code on GitHub ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 Zohaib Ali Mughal</span>
+    <a href="../../#projects">All projects</a>
+    <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="../../assets/js/lenis.min.js"></script>
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>
