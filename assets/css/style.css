@@ -23,6 +23,9 @@
   --c-sportefy: #9F63C9;
   --c-etg: #008BE9;
   --c-plexor: #8DC63F;
+  --c-voice: #2EC4B6;
+  --c-trading: #F2A93B;
+  --c-faculty: #5B8DEF;
 
   /* Page accent: neutral by default, overridden per project via data-accent */
   --accent: #EDEDEF;
@@ -42,6 +45,9 @@
 [data-accent="sportefy"] { --accent: var(--c-sportefy); }
 [data-accent="etg"]      { --accent: var(--c-etg); }
 [data-accent="plexor"]   { --accent: var(--c-plexor); }
+[data-accent="voice"]    { --accent: var(--c-voice); }
+[data-accent="trading"]  { --accent: var(--c-trading); }
+[data-accent="faculty"]  { --accent: var(--c-faculty); }
 
 /* Recompute the soft tint wherever the accent changes (a :root value would stay neutral) */
 [data-accent] { --accent-soft: color-mix(in srgb, var(--accent) 14%, transparent); }
