@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voice AI Patient-Intake Agent · Zohaib Ali Mughal</title>
+<meta name="description" content="Case study: a phone agent that registers new patients in English or Spanish. A Retell LLM agent with five tool-calling functions over a Fastify, Zod and Postgres API.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://zohaibmughal.dev/work/voice-intake/">
+<meta property="og:image" content="https://zohaibmughal.dev/assets/img/og/home.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://zohaibmughal.dev/work/voice-intake/">
+<link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-accent="voice">
+
+<nav class="nav" aria-label="Main">
+  <div class="nav-inner">
+    <a class="nav-brand" href="../../">Zohaib Ali Mughal <span class="mono">/ FULL-STACK</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">MENU</button>
+    <div class="nav-links" id="nav-links">
+      <a href="../../#projects">← All projects</a>
+      <a href="https://github.com/Zohaib24648/voice-intake" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="nav-cta" href="../../#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="cs-hero">
+  <div class="container">
+    <span class="eyebrow"><span class="accent">Personal project / Voice AI</span> · Case Study</span>
+    <h1>Voice AI Patient-Intake Agent</h1>
+    <p class="lede">A phone agent that registers new patients over a U.S. number, in English or Spanish, and saves nothing until the caller confirms a read-back.</p>
+    <div class="cs-meta">
+      <div class="cs-meta-item"><span class="k">Role</span><span class="v">Personal project · built end to end</span></div>
+      <div class="cs-meta-item"><span class="k">Timeline</span><span class="v">Oct 2026</span></div>
+      <div class="cs-meta-item"><span class="k">Domain</span><span class="v">Patient intake · Voice AI</span></div>
+      <div class="cs-meta-item"><span class="k">Shape</span><span class="v">LLM agent, REST API, dashboard</span></div>
+      <div class="cs-meta-item"><span class="k">Quality</span><span class="v">53 passing tests</span></div>
+      <div class="cs-meta-item"><span class="k">Hosting</span><span class="v">Railway + Vercel</span></div>
+    </div>
+    <div class="cs-hero-media reveal"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="691" src="../../assets/img/voice-intake/dashboard-patients.webp" alt="Patient registry dashboard listing patients registered by phone"></div></div>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="accent">The Brief</span></span>
+      <h2>Registration by phone, with no half-saved records.</h2>
+      <p class="lede">Callers give their details to a voice agent instead of a form. The hard parts are accuracy and safety: names spelled right, invalid dates caught, and no duplicate or half-written patient when a call drops or the network stalls.</p>
+    </div>
+    <div class="reveal" style="display:grid; gap:18px; max-width:44em">
+      <div class="feat"><span class="dot"></span><span>Names spelled and confirmed letter by letter; numbers read back once as they are given</span></div>
+      <div class="feat"><span class="dot"></span><span>Dates, phone numbers, states and ZIP codes validated twice: Zod in the API, CHECK constraints in Postgres</span></div>
+      <div class="feat"><span class="dot"></span><span>Returning callers found by phone number and offered an update instead of a duplicate</span></div>
+      <div class="feat"><span class="dot"></span><span>Mock appointment booking from open slots; a slot can only be booked once</span></div>
+      <div class="feat"><span class="dot"></span><span>English and Spanish; transcripts and summaries stored per call and linked to the patient</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="accent">Architecture &amp; Stack</span></span>
+      <h2>One validation contract for the agent, the API and the database.</h2>
+    </div>
+    <div class="arch reveal" role="list" aria-label="Architecture layers">
+      <div class="layer" role="listitem"><span class="layer-label">Caller</span><div class="layer-nodes">
+        <div class="lnode"><span class="t">U.S. phone number</span><span class="s">PSTN</span></div>
+      </div></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer" role="listitem"><span class="layer-label">Voice</span><div class="layer-nodes">
+        <div class="lnode"><span class="t">Retell AI</span><span class="s">Telephony · speech-to-text</span></div>
+        <div class="lnode hot"><span class="t">LLM agent</span><span class="s">14-section prompt · 5 tools</span></div>
+        <div class="lnode"><span class="t">ElevenLabs</span><span class="s">Text-to-speech</span></div>
+      </div></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer" role="listitem"><span class="layer-label">API</span><div class="layer-nodes">
+        <div class="lnode"><span class="t">Signed webhooks</span><span class="s">HMAC check on the raw body</span></div>
+        <div class="lnode"><span class="t">Fastify + Zod</span><span class="s">Tool handlers · REST routes</span></div>
+      </div></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer" role="listitem"><span class="layer-label">Data</span><div class="layer-nodes">
+        <div class="lnode"><span class="t">PostgreSQL</span><span class="s">Drizzle · patients, calls, appointments</span></div>
+      </div></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer" role="listitem"><span class="layer-label">Dashboard</span><div class="layer-nodes">
+        <div class="lnode"><span class="t">Next.js</span><span class="s">Server components, no keys in the browser</span></div>
+      </div></div>
+    </div>
+    <div class="arch-cols reveal">
+      <div>
+        <div class="arch-col-label">Stack</div>
+        <div class="stackrow"><span class="stacklabel">Voice</span><div class="chips"><span class="chip">Retell AI</span><span class="chip">OpenAI model</span><span class="chip">ElevenLabs</span></div></div>
+        <div class="stackrow"><span class="stacklabel">Backend</span><div class="chips"><span class="chip">Fastify 5</span><span class="chip">Zod 4</span><span class="chip">Drizzle ORM</span></div></div>
+        <div class="stackrow"><span class="stacklabel">Data</span><div class="chips"><span class="chip">PostgreSQL</span></div></div>
+        <div class="stackrow"><span class="stacklabel">Frontend</span><div class="chips"><span class="chip">Next.js 16</span><span class="chip">Tailwind 4</span></div></div>
+        <div class="stackrow"><span class="stacklabel">Quality</span><div class="chips"><span class="chip">Vitest</span><span class="chip">PGlite</span></div></div>
+        <div class="stackrow"><span class="stacklabel">Hosting</span><div class="chips"><span class="chip">Railway</span><span class="chip">Vercel</span><span class="chip">Docker</span></div></div>
+      </div>
+      <div>
+        <div class="arch-col-label">Key Decisions</div>
+        <div class="decision"><span class="n">01</span><span>The model changes state only through five tools, and every tool validates with the same Zod schemas as the REST API</span></div>
+        <div class="decision"><span class="n">02</span><span>Nothing is written before a confirmed read-back, and write tools never retry, so one confirmation cannot create two records</span></div>
+        <div class="decision"><span class="n">03</span><span>Every tool call and call event is signature-checked over the raw body before any handler runs</span></div>
+        <div class="decision"><span class="n">04</span><span>Prompt, tool schemas and agent settings live in the repo and are provisioned by an idempotent sync script</span></div>
+        <div class="decision"><span class="n">05</span><span>Integration tests run the real migrations on PGlite and pin the model&#x27;s tool schemas to the API&#x27;s</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="accent">Walkthrough</span></span>
+      <h2>Inside the product.</h2>
+      <p class="lede">Screenshots from a local run on fictional demo data.</p>
+    </div>
+    <div class="walk-group reveal">
+      <div class="walk-group-label">Patient registry · Next.js dashboard</div>
+      <div class="shots">
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="691" src="../../assets/img/voice-intake/patient-record.webp" alt="Patient record with identity, contact, address and insurance" loading="lazy"></div><div class="shot-cap">One patient record, as the agent saved it</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="691" src="../../assets/img/voice-intake/call-transcript.webp" alt="Call transcript showing name spelling, read-back and booking" loading="lazy"></div><div class="shot-cap">Call summary and transcript, linked to the record</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="691" src="../../assets/img/voice-intake/call-spanish.webp" alt="Spanish-language call transcript with an emergency contact" loading="lazy"></div><div class="shot-cap">Caller switches to Spanish mid-call</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="691" src="../../assets/img/voice-intake/call-correction.webp" alt="Call where the caller corrects a phone digit and types an ID on the keypad" loading="lazy"></div><div class="shot-cap">A corrected digit and keypad entry for an ID</div></div>
+      </div>
+    </div>
+    <div class="walk-group reveal">
+      <div class="walk-group-label">Agent &amp; API</div>
+      <div class="shots cols-3">
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="691" src="../../assets/img/voice-intake/code-register-tool.webp" alt="register_patient tool definition with max_retry 0" loading="lazy"></div><div class="shot-cap">The register tool: no retries, confirmed fields only</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="691" src="../../assets/img/voice-intake/code-system-prompt.webp" alt="System prompt section on confirmation before saving" loading="lazy"></div><div class="shot-cap">Prompt rules for read-back and saving</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="691" src="../../assets/img/voice-intake/api-docs.webp" alt="OpenAPI documentation listing patient endpoints and signed webhooks" loading="lazy"></div><div class="shot-cap">OpenAPI docs generated from the Zod schemas</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="impact">
+  <div class="container impact-grid reveal">
+    <div class="metrics">
+      <div class="metric"><span class="num">5</span><span class="cap">Tool-calling functions</span></div>
+      <div class="metric"><span class="num">53</span><span class="cap">Passing tests</span></div>
+      <div class="metric"><span class="num">14</span><span class="cap">Prompt sections</span></div>
+    </div>
+    <p>A voice agent that can only touch data through validated tools: invalid input comes back as field-level errors the agent re-asks, and a dropped call leaves nothing behind.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="display:grid; gap:20px">
+    <a class="next-card reveal" data-accent="trading" href="../trading-system/">
+      <div>
+        <div class="k">Next project</div>
+        <h3>Crypto-Derivatives Trading System</h3>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+    <div class="contact-row reveal">
+      <a class="btn btn-primary" href="mailto:z.mughal.24648@gmail.com">z.mughal.24648@gmail.com</a>
+      <a class="btn btn-ghost" href="https://github.com/Zohaib24648/voice-intake" target="_blank" rel="noopener">View the code on GitHub ↗</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 Zohaib Ali Mughal</span>
+    <a href="../../#projects">All projects</a>
+    <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="../../assets/js/lenis.min.js"></script>
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>
