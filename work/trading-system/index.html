@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crypto-Derivatives Trading System · Zohaib Ali Mughal</title>
+<meta name="description" content="Case study: an event-driven TypeScript trading system. Strategy processes publish signals over Redis Streams to one execution service with a single pure risk function.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://zohaibmughal.dev/work/trading-system/">
+<meta property="og:image" content="https://zohaibmughal.dev/assets/img/og/home.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://zohaibmughal.dev/work/trading-system/">
+<link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body data-accent="trading">
+
+<nav class="nav" aria-label="Main">
+  <div class="nav-inner">
+    <a class="nav-brand" href="../../">Zohaib Ali Mughal <span class="mono">/ FULL-STACK</span></a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">MENU</button>
+    <div class="nav-links" id="nav-links">
+      <a href="../../#projects">← All projects</a>
+      <a class="nav-cta" href="../../#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="cs-hero">
+  <div class="container">
+    <span class="eyebrow"><span class="accent">Personal project / Trading systems</span> · Case Study</span>
+    <h1>Crypto-Derivatives Trading System</h1>
+    <p class="lede">An event-driven TypeScript system that turns candle signals into risk-checked orders, with every trading limit in one pure function.</p>
+    <div class="cs-meta">
+      <div class="cs-meta-item"><span class="k">Role</span><span class="v">Personal project · built with a friend</span></div>
+      <div class="cs-meta-item"><span class="k">Timeline</span><span class="v">May 2026 to Aug 2026</span></div>
+      <div class="cs-meta-item"><span class="k">Domain</span><span class="v">Crypto derivatives</span></div>
+      <div class="cs-meta-item"><span class="k">Shape</span><span class="v">4 services · 8 shared packages</span></div>
+      <div class="cs-meta-item"><span class="k">Quality</span><span class="v">3,810 test cases</span></div>
+      <div class="cs-meta-item"><span class="k">Code</span><span class="v">Private repository</span></div>
+    </div>
+    <div class="cs-hero-media reveal"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="691" src="../../assets/img/trading-system/traders-registry.webp" alt="Trader registry with presence, feeds and signal outcomes"></div></div>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="accent">The Brief</span></span>
+      <h2>Signals in, risk-checked orders out.</h2>
+      <p class="lede">Strategies should be cheap to write and impossible to let loose: they publish signals and nothing else, while one service owns sizing, limits and orders.</p>
+    </div>
+    <div class="reveal" style="display:grid; gap:18px; max-width:44em">
+      <div class="feat"><span class="dot"></span><span>One market-data ingester fetches 1-minute candles and derives every higher timeframe itself</span></div>
+      <div class="feat"><span class="dot"></span><span>Strategy processes hold no keys and never size or place orders; they only write signals to their own stream</span></div>
+      <div class="feat"><span class="dot"></span><span>One execution service admits, deduplicates and risk-checks each signal before placing orders and tracking fills</span></div>
+      <div class="feat"><span class="dot"></span><span>A Next.js dashboard reaches the API server to server, so the browser never holds the access token</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="accent">Architecture &amp; Stack</span></span>
+      <h2>Streams between processes, one gate before the market.</h2>
+    </div>
+    <div class="arch reveal" role="list" aria-label="Architecture layers">
+      <div class="layer" role="listitem"><span class="layer-label">Market data</span><div class="layer-nodes">
+        <div class="lnode"><span class="t">Ingester</span><span class="s">1m candles · derived timeframes</span></div>
+      </div></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer" role="listitem"><span class="layer-label">Streams</span><div class="layer-nodes">
+        <div class="lnode"><span class="t">Redis Streams</span><span class="s">Candles in · signals out</span></div>
+      </div></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer" role="listitem"><span class="layer-label">Strategies</span><div class="layer-nodes">
+        <div class="lnode"><span class="t">Trader processes</span><span class="s">Signals only, no keys</span></div>
+      </div></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer" role="listitem"><span class="layer-label">Execution</span><div class="layer-nodes">
+        <div class="lnode hot"><span class="t">Risk gate</span><span class="s">One pure function</span></div>
+        <div class="lnode"><span class="t">Orders &amp; fills</span><span class="s">Single instance, advisory lock</span></div>
+      </div></div>
+      <div class="layer-join" aria-hidden="true"></div>
+      <div class="layer" role="listitem"><span class="layer-label">Control</span><div class="layer-nodes">
+        <div class="lnode"><span class="t">Fastify + tRPC</span><span class="s">API · realtime</span></div>
+        <div class="lnode"><span class="t">Next.js</span><span class="s">Dashboard</span></div>
+      </div></div>
+    </div>
+    <div class="arch-cols reveal">
+      <div>
+        <div class="arch-col-label">Stack</div>
+        <div class="stackrow"><span class="stacklabel">Language</span><div class="chips"><span class="chip">TypeScript</span><span class="chip">Node 22</span><span class="chip">pnpm + Turborepo</span></div></div>
+        <div class="stackrow"><span class="stacklabel">Services</span><div class="chips"><span class="chip">Fastify 5</span><span class="chip">tRPC 11</span><span class="chip">Redis Streams</span></div></div>
+        <div class="stackrow"><span class="stacklabel">Data</span><div class="chips"><span class="chip">Prisma</span><span class="chip">PostgreSQL</span><span class="chip">zod</span></div></div>
+        <div class="stackrow"><span class="stacklabel">Frontend</span><div class="chips"><span class="chip">Next.js</span><span class="chip">React 19</span></div></div>
+        <div class="stackrow"><span class="stacklabel">Quality</span><div class="chips"><span class="chip">Vitest</span><span class="chip">Docker Compose</span></div></div>
+      </div>
+      <div>
+        <div class="arch-col-label">Key Decisions</div>
+        <div class="decision"><span class="n">01</span><span>Only the execution service holds exchange keys and places orders</span></div>
+        <div class="decision"><span class="n">02</span><span>Every limit (sizing, per-coin slots, four exposure ceilings, hedge reserve, margin) sits in one pure risk function shared by the order gate and the settings screen</span></div>
+        <div class="decision"><span class="n">03</span><span>A priority-laned rate-limit budget keeps order traffic ahead of market data</span></div>
+        <div class="decision"><span class="n">04</span><span>The wire format is defined once in zod and published as JSON Schema, with a drift test and cross-language parity fixtures</span></div>
+        <div class="decision"><span class="n">05</span><span>Built with an AI coding-agent workflow I set up: 7 layer-author and 4 read-only auditor agents with fenced responsibilities</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow"><span class="accent">Walkthrough</span></span>
+      <h2>Inside the product.</h2>
+      <p class="lede">Screenshots from a local run on fictional demo data.</p>
+    </div>
+    <div class="walk-group reveal">
+      <div class="walk-group-label">Control plane · Next.js dashboard</div>
+      <div class="shots cols-3">
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="691" src="../../assets/img/trading-system/risk-limits.webp" alt="Risk settings with per-coin trade slots and exposure ceilings" loading="lazy"></div><div class="shot-cap">Trade slots, exposure ceilings and hedge reserve</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="691" src="../../assets/img/trading-system/per-coin-policy.webp" alt="Per-coin policy table with long and short toggles" loading="lazy"></div><div class="shot-cap">Per-coin direction and limit exceptions</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="691" src="../../assets/img/trading-system/trader-config.webp" alt="Trader configuration dialog with JSON parameters" loading="lazy"></div><div class="shot-cap">Per-trader parameters and take-profit cap</div></div>
+      </div>
+    </div>
+    <div class="walk-group reveal">
+      <div class="walk-group-label">Core code</div>
+      <div class="shots">
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="691" src="../../assets/img/trading-system/code-risk-function.webp" alt="evaluateIntent risk function excerpt" loading="lazy"></div><div class="shot-cap">One pure function checks every exposure ceiling</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="691" src="../../assets/img/trading-system/code-wire-contract.webp" alt="Zod schemas for entry and open signals" loading="lazy"></div><div class="shot-cap">Signal wire contract defined once in zod</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="impact">
+  <div class="container impact-grid reveal">
+    <div class="metrics">
+      <div class="metric"><span class="num">4</span><span class="cap">Services</span></div>
+      <div class="metric"><span class="num">8</span><span class="cap">Shared packages</span></div>
+      <div class="metric"><span class="num">3,810</span><span class="cap">Test cases</span></div>
+    </div>
+    <p>Adding a strategy means writing a signal rule, not touching orders or limits: the risk function and the execution service are the only path to the market.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container" style="display:grid; gap:20px">
+    <a class="next-card reveal" data-accent="faculty" href="../faculty-reviews/">
+      <div>
+        <div class="k">Next project</div>
+        <h3>Faculty Reviews</h3>
+      </div>
+      <span class="arrow">→</span>
+    </a>
+    <div class="contact-row reveal">
+      <a class="btn btn-primary" href="mailto:z.mughal.24648@gmail.com">z.mughal.24648@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 Zohaib Ali Mughal</span>
+    <a href="../../#projects">All projects</a>
+    <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top ↑</a>
+  </div>
+</footer>
+
+<script src="../../assets/js/lenis.min.js"></script>
+<script src="../../assets/js/main.js"></script>
+</body>
+</html>
