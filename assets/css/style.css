@@ -1,3 +1,9 @@
+/* Fonts are self-hosted (latin subsets from Google Fonts, SIL Open Font License): no third-party requests. */
+@font-face { font-family: "Manrope"; src: url("../fonts/manrope-latin.woff2") format("woff2"); font-weight: 400 800; font-style: normal; font-display: swap; }
+@font-face { font-family: "Space Grotesk"; src: url("../fonts/space-grotesk-latin.woff2") format("woff2"); font-weight: 400 700; font-style: normal; font-display: swap; }
+@font-face { font-family: "Space Mono"; src: url("../fonts/space-mono-400-latin.woff2") format("woff2"); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: "Space Mono"; src: url("../fonts/space-mono-700-latin.woff2") format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
+
 /* ============================================================
    Zohaib Ali Mughal — Portfolio
    Design tokens & components (dark theme, deck-derived)
@@ -36,7 +42,7 @@
   --font-body: 'Manrope', sans-serif;
   --font-mono: 'Space Mono', monospace;
 
-  --container: 1160px;
+  --container: 1360px;
   --pad: clamp(20px, 5vw, 48px);
 }
 
@@ -150,7 +156,7 @@ section { padding-block: clamp(72px, 9vw, 130px); }
   padding: 6px 14px;
   border-radius: 999px;
   font-family: var(--font-mono);
-  font-size: 12.5px;
+  font-size: 13px;
   letter-spacing: -0.01em;
   background: var(--accent-soft);
   color: color-mix(in srgb, var(--accent) 78%, #ffffff);
@@ -174,7 +180,7 @@ section { padding-block: clamp(72px, 9vw, 130px); }
 
 .metric .cap {
   font-family: var(--font-mono);
-  font-size: 12.5px;
+  font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--text-3);
@@ -201,7 +207,7 @@ section { padding-block: clamp(72px, 9vw, 130px); }
   align-items: center;
   gap: 10px;
   font-family: var(--font-mono);
-  font-size: 12.5px;
+  font-size: 13px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-2);
@@ -258,7 +264,7 @@ section { padding-block: clamp(72px, 9vw, 130px); }
   letter-spacing: -0.02em;
 }
 
-.nav-brand .mono { font-family: var(--font-mono); font-size: 12px; color: var(--text-3); letter-spacing: 0.1em; }
+.nav-brand .mono { font-family: var(--font-mono); font-size: 13px; color: var(--text-3); letter-spacing: 0.1em; }
 
 .nav-links { display: flex; align-items: center; gap: 30px; }
 
@@ -283,7 +289,7 @@ section { padding-block: clamp(72px, 9vw, 130px); }
   padding: 8px 10px;
   cursor: pointer;
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 13px;
 }
 
 @media (max-width: 760px) {
@@ -314,7 +320,7 @@ section { padding-block: clamp(72px, 9vw, 130px); }
 
 .hero-main { display: grid; gap: 30px; min-width: 0; }
 
-.hero h1 { max-width: 11em; }
+.hero h1 { max-width: 11em; font-size: clamp(38px, 9.8vw, 56px); }
 
 /* Project index, mirrors the portfolio deck cover. Desktop only: the work list follows directly below on small screens. */
 .hero-index { display: none; }
@@ -339,7 +345,7 @@ section { padding-block: clamp(72px, 9vw, 130px); }
 .hi-n { font-family: var(--font-mono); font-size: 13px; color: var(--accent); }
 .hi-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent); }
 .hi-name { font-family: var(--font-head); font-weight: 500; font-size: 22px; letter-spacing: -0.01em; }
-.hi-sector { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-3); }
+.hi-sector { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-3); }
 
 .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; margin-top: 8px; }
 
@@ -460,7 +466,7 @@ a.project-card:focus-visible { outline-offset: 4px; }
 
 .project-kind {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-3);
@@ -525,7 +531,7 @@ a.project-card:focus-visible { outline-offset: 4px; }
 
 .timeline-org {
   font-family: var(--font-mono);
-  font-size: 12.5px;
+  font-size: 13px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-3);
@@ -557,7 +563,7 @@ a.project-card:focus-visible { outline-offset: 4px; }
 
 .timeline-item .when {
   font-family: var(--font-mono);
-  font-size: 12.5px;
+  font-size: 13px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-3);
@@ -593,7 +599,7 @@ a.project-card:focus-visible { outline-offset: 4px; }
 
 .profile-label {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-3);
@@ -645,7 +651,7 @@ footer {
   gap: 16px;
   flex-wrap: wrap;
   font-family: var(--font-mono);
-  font-size: 12.5px;
+  font-size: 13px;
   color: var(--text-4);
 }
 
@@ -677,7 +683,7 @@ footer {
 
 .cs-meta-item .k {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--text-3);
@@ -706,7 +712,7 @@ footer {
 
 .layer-label {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 13px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-3);
@@ -726,7 +732,7 @@ footer {
 }
 
 .lnode .t { font-family: var(--font-head); font-weight: 600; font-size: 16px; overflow-wrap: anywhere; }
-.lnode .s { font-family: var(--font-mono); font-size: 12px; color: var(--text-3); }
+.lnode .s { font-family: var(--font-mono); font-size: 13px; color: var(--text-3); }
 
 .lnode.hot {
   border-color: color-mix(in srgb, var(--accent) 60%, var(--line-2));
@@ -833,7 +839,7 @@ footer {
   color: var(--text-2);
 }
 
-.shot-cap::before { content: "—"; color: var(--accent); flex: none; }
+.shot-cap::before { content: ""; flex: none; width: 14px; height: 2px; background: var(--accent); align-self: center; }
 
 /* Walkthrough groups */
 
@@ -906,7 +912,7 @@ footer {
 
 .next-card:hover { border-color: color-mix(in srgb, var(--accent) 55%, var(--line)); transform: translateY(-3px); }
 
-.next-card .k { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); margin-bottom: 10px; }
+.next-card .k { font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); margin-bottom: 10px; }
 
 .next-card .arrow { font-family: var(--font-head); font-size: 34px; color: var(--accent); }
 

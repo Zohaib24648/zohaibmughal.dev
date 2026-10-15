@@ -3,17 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ETG — Enforcement-First Field-Service OS · Zohaib Ali Mughal</title>
-<meta name="description" content="Case study: ETG — an enforcement-first operations platform for an electrical, security, AV &amp; telecom group. One decision engine behind dispatch, workforce, assets and dual-sided billing.">
+<title>ETG: Enforcement-First Field-Service OS · Zohaib Ali Mughal</title>
+<meta name="description" content="Case study: ETG, an enforcement-first operations platform for an electrical, security, AV &amp; telecom group. One decision engine behind dispatch, workforce, assets and dual-sided billing.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://zohaibmughal.dev/work/etg/">
 <meta property="og:image" content="https://zohaibmughal.dev/assets/img/og/etg.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://zohaibmughal.dev/work/etg/">
 <link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
 <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
@@ -33,14 +30,14 @@
 
 <header class="cs-hero">
   <div class="container">
-    <span class="eyebrow"><span class="accent">01 / Field-Service Ops</span> — Case Study</span>
+    <span class="eyebrow"><span class="accent">01 / Field-Service Ops</span> · Case Study</span>
     <img width="228" height="60" class="work-logo" src="../../assets/img/etg-logo-white.svg" alt="Evolution Technology Group">
     <h1>Enforcement&#8209;First Field&#8209;Service OS</h1>
-    <p class="lede">An operations platform for an electrical, security, AV &amp; telecom group — five portals over one decision gate, spanning quote-to-cash, procurement, workforce, assets and dual-sided billing.</p>
+    <p class="lede">An operations platform for an electrical, security, AV &amp; telecom group: five portals over one decision gate, spanning quote-to-cash, procurement, workforce, assets and dual-sided billing.</p>
     <div class="cs-meta">
       <div class="cs-meta-item"><span class="k">Role</span><span class="v">Software Engineer II · Slidey LLC</span></div>
-        <div class="cs-meta-item"><span class="k">Scope</span><span class="v">Sole architect — greenfield build</span></div>
-      <div class="cs-meta-item"><span class="k">Timeline</span><span class="v">May 2026 — Present</span></div>
+        <div class="cs-meta-item"><span class="k">Scope</span><span class="v">Sole architect: greenfield build</span></div>
+      <div class="cs-meta-item"><span class="k">Timeline</span><span class="v">May 2026 to Present</span></div>
       <div class="cs-meta-item"><span class="k">Client</span><span class="v">Australian multi-entity trade group</span></div>
       <div class="cs-meta-item"><span class="k">Shape</span><span class="v">3 apps · 25 packages</span></div>
     </div>
@@ -53,15 +50,15 @@
     <div class="section-head reveal">
       <span class="eyebrow"><span class="accent">The Brief</span></span>
       <h2>Stop margin leakage before it ships.</h2>
-      <p class="lede">Unbilled supplier costs and scheduled-vs-actual billing gaps were leaking an estimated $5k a week. ETG puts one pure, unit-testable decision gate between the API and every workflow — every dispatch, closeout and invoice transition is evaluated, and every block or manager override lands in an audit trail.</p>
+      <p class="lede">Unbilled supplier costs and scheduled-vs-actual billing gaps were leaking an estimated $5k a week. ETG puts one pure, unit-testable decision gate between the API and every workflow: every dispatch, closeout and invoice transition is evaluated, and every block or manager override lands in an audit trail.</p>
     </div>
     <div class="reveal" style="display:grid; gap:18px; max-width:44em">
-      <div class="feat"><span class="dot"></span><span>Five portals — ops, technician, client, subcontractor, and tokenised public links</span></div>
-      <div class="feat"><span class="dot"></span><span>Quote-to-cash — work requests, quotes, projects, field jobs, invoicing, receivables</span></div>
-      <div class="feat"><span class="dot"></span><span>Procurement — purchase orders, supplier invoices and credits, stock, scored bank reconciliation</span></div>
-      <div class="feat"><span class="dot"></span><span>Workforce — scheduling, timesheets, closeouts, licences and inductions, AU award rules</span></div>
-      <div class="feat"><span class="dot"></span><span>Assets &amp; compliance — registers, site credentials, field checklists, document control</span></div>
-      <div class="feat"><span class="dot"></span><span>Governance — approvals, alerts, enforcement events, SLA targets, audit log</span></div>
+      <div class="feat"><span class="dot"></span><span>Five portals: ops, technician, client, subcontractor, and tokenised public links</span></div>
+      <div class="feat"><span class="dot"></span><span>Quote-to-cash: work requests, quotes, projects, field jobs, invoicing, receivables</span></div>
+      <div class="feat"><span class="dot"></span><span>Procurement: purchase orders, supplier invoices and credits, stock, scored bank reconciliation</span></div>
+      <div class="feat"><span class="dot"></span><span>Workforce: scheduling, timesheets, closeouts, licences and inductions, AU award rules</span></div>
+      <div class="feat"><span class="dot"></span><span>Assets &amp; compliance: registers, site credentials, field checklists, document control</span></div>
+      <div class="feat"><span class="dot"></span><span>Governance: approvals, alerts, enforcement events, SLA targets, audit log</span></div>
     </div>
   </div>
 </section>
@@ -101,7 +98,7 @@
       </div>
       <div>
         <div class="arch-col-label">Key Decisions</div>
-        <div class="decision"><span class="n">01</span><span>One shared enforcement gate (evaluateDecision) across dispatch, closeout &amp; billing — structured failure codes, audited overrides</span></div>
+        <div class="decision"><span class="n">01</span><span>One shared enforcement gate (evaluateDecision) across dispatch, closeout &amp; billing: structured failure codes, audited overrides</span></div>
         <div class="decision"><span class="n">02</span><span>Money modelled as BigInt integer cents (ex-GST)</span></div>
         <div class="decision"><span class="n">03</span><span>Event-driven workers with dead-letter queues</span></div>
       </div>
@@ -128,10 +125,10 @@
     <div class="walk-group reveal">
       <div class="walk-group-label">Admin &amp; Field · Web</div>
       <div class="shots">
-        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="622" src="../../assets/img/etg/admin-calendar.webp" alt="ETG scheduling command centre" loading="lazy"></div><div class="shot-cap">Admin — scheduling command centre</div></div>
-        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="622" src="../../assets/img/etg/admin-dashboard.webp" alt="ETG admin dashboard" loading="lazy"></div><div class="shot-cap">Admin dashboard — live operations</div></div>
-        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="622" src="../../assets/img/etg/admin-invoice.webp" alt="ETG invoicing" loading="lazy"></div><div class="shot-cap">Invoicing — dual-sided billing</div></div>
-        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="622" src="../../assets/img/etg/tech-web-job.webp" alt="ETG technician web portal" loading="lazy"></div><div class="shot-cap">Technician web portal — job view</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="622" src="../../assets/img/etg/admin-calendar.webp" alt="ETG scheduling command centre" loading="lazy"></div><div class="shot-cap">Admin, scheduling command centre</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="622" src="../../assets/img/etg/admin-dashboard.webp" alt="ETG admin dashboard" loading="lazy"></div><div class="shot-cap">Admin dashboard: live operations</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="622" src="../../assets/img/etg/admin-invoice.webp" alt="ETG invoicing" loading="lazy"></div><div class="shot-cap">Invoicing: dual-sided billing</div></div>
+        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="622" src="../../assets/img/etg/tech-web-job.webp" alt="ETG technician web portal" loading="lazy"></div><div class="shot-cap">Technician web portal: job view</div></div>
       </div>
     </div>
   </div>
@@ -144,7 +141,7 @@
       <div class="metric"><span class="num">1,000+</span><span class="cap">tRPC procedures</span></div>
       <div class="metric"><span class="num">30K+</span><span class="cap">Automated tests</span></div>
     </div>
-    <p>Stops an estimated $5k a week of margin leakage by blocking unbillable or non-compliant work before it ships. The same gate runs behind all five portals, so field, client and back office never disagree about a job&#8217;s state — backed by 30,000+ tests across 2,200+ files.</p>
+    <p>Stops an estimated $5k a week of margin leakage by blocking unbillable or non-compliant work before it ships. The same gate runs behind all five portals, so field, client and back office never disagree about a job&#8217;s state, backed by 30,000+ tests across 2,200+ files.</p>
   </div>
 </section>
 
@@ -153,7 +150,7 @@
     <a class="next-card reveal" data-accent="hyss" href="../hyss/">
       <div>
         <div class="k">Next case study</div>
-        <h3>Hyss — AV &amp; Live Events Staffing Platform</h3>
+        <h3>Hyss: AV &amp; Live Events Staffing Platform</h3>
       </div>
       <span class="arrow">→</span>
     </a>
