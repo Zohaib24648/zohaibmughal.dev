@@ -1,177 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sportefy — Sports Venue Booking &amp; Matchmaking · Zohaib Ali Mughal</title>
-<meta name="description" content="Case study: Sportefy — a B2B2C sports platform live in Pakistan. Consumer Flutter app on the App Store &amp; Play Store, Next.js admin dashboard, versioned NestJS API.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://zohaibmughal.dev/work/sportefy/">
-<meta property="og:image" content="https://zohaibmughal.dev/assets/img/og/sportefy.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<title>Sportefy, booking app, ios and android by Zohaib Ali Mughal</title>
+<meta name="description" content="Sports booking and matchmaking app live in Pakistan: Flutter on both stores, Next.js admin panel, NestJS API.">
 <link rel="canonical" href="https://zohaibmughal.dev/work/sportefy/">
-<link rel="icon" type="image/svg+xml" href="../../assets/img/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sportefy, booking app, ios and android by Zohaib Ali Mughal">
+<meta property="og:description" content="Sports booking and matchmaking app live in Pakistan: Flutter on both stores, Next.js admin panel, NestJS API.">
+<meta property="og:url" content="https://zohaibmughal.dev/work/sportefy/">
+<meta property="og:image" content="https://zohaibmughal.dev/assets/img/sportefy/admin-command-center-1600.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1c1c1c">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/SchibstedGrotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
 <script>document.documentElement.classList.add('js')</script>
-<link rel="stylesheet" href="../../assets/css/style.css">
 </head>
-<body data-accent="sportefy">
-
-<nav class="nav" aria-label="Main">
-  <div class="nav-inner">
-    <a class="nav-brand" href="../../">Zohaib Ali Mughal <span class="mono">/ FULL-STACK</span></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">MENU</button>
-    <div class="nav-links" id="nav-links">
-      <a href="../../#work">← All work</a>
-      <a href="../../assets/decks/Sportefy.pdf" download>Deck PDF</a>
-      <a class="nav-cta" href="../../#contact">Contact</a>
-    </div>
-  </div>
-</nav>
-
-<header class="cs-hero">
-  <div class="container">
-    <span class="eyebrow"><span class="accent">04 / Sports Booking</span> — Case Study</span>
-    <img width="354" height="72" class="work-logo" src="../../assets/img/sportefy-logo-white.png" alt="Sportefy">
-    <h1>Sports Venue Booking &amp; Matchmaking</h1>
-    <p class="lede">A B2B2C sports platform live in Pakistan — consumer Flutter app, Next.js admin dashboard and a versioned NestJS API. Book venues, find matches, pay.</p>
-    <div class="cs-meta">
-      <div class="cs-meta-item"><span class="k">Role</span><span class="v">Trainee Software Engineer · Slidey LLC</span></div>
-        <div class="cs-meta-item"><span class="k">Scope</span><span class="v">Backend, admin panel and Flutter app</span></div>
-      <div class="cs-meta-item"><span class="k">Timeline</span><span class="v">Nov 2024 — Feb 2025</span></div>
-      <div class="cs-meta-item"><span class="k">Status</span><span class="v">Live — App Store &amp; Play Store</span></div>
-      <div class="cs-meta-item"><span class="k">Shape</span><span class="v">B2B2C · app + admin + API</span></div>
-    </div>
-    <div class="cs-hero-media reveal"><img width="1560" height="1440" src="../../assets/img/sportefy-hero.webp" alt="Sportefy consumer app and admin dashboard"></div>
-  </div>
+<body class="project">
+<a class="skip" href="#main">Skip to content</a>
+<header class="bar wrap">
+  <a class="wordmark" href="/">Zohaib Ali Mughal</a>
+  <nav class="bar-links" aria-label="Main">
+    <a href="/#work">Work</a><a href="/#prices">Offers</a><a href="/#questions">Questions</a>
+  </nav>
+  <a class="button bar-button" href="mailto:z.mughal.24648@gmail.com?subject=Project%20enquiry&amp;body=Hi%20Zohaib%2C%0A%0AWhat%20I%20need%20built%3A%0A%0AWhen%20I%20need%20it%3A%0A%0ABudget%3A%0A">Start a project</a>
 </header>
-
-<section>
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow"><span class="accent">The Brief</span></span>
-      <h2>Book venues, find matches, pay.</h2>
-      <p class="lede">Players book courts, join matches and pay from a consumer app; venue operators and platform staff run everything from an admin dashboard — all on one versioned API that never breaks the mixed-version mobile install base.</p>
-    </div>
-    <div class="reveal" style="display:grid; gap:18px; max-width:44em">
-      <div class="feat"><span class="dot"></span><span>Consumer Flutter app — booking, slots, QR check-in &amp; wallet, offline-first with request replay</span></div>
-      <div class="feat"><span class="dot"></span><span>Realtime matchmaking &amp; match chat — Supabase Realtime + Postgres row-level security</span></div>
-      <div class="feat"><span class="dot"></span><span>Next.js admin dashboard over a versioned /v1 API, one shared RBAC matrix (5 platform roles + venue-scoped staff)</span></div>
-      <div class="feat"><span class="dot"></span><span>Payments domain — pluggable gateway adapter (Paymob), wallet / credits ledger, promo codes, PDF booking confirmations</span></div>
-    </div>
+<main id="main">
+<section class="p-title wrap grid">
+  <h1 class="p-name" data-reveal>Sportefy</h1>
+  <p class="p-sum" data-reveal style="--i:1">Sports booking and matchmaking app live in Pakistan: Flutter on both stores, Next.js admin panel, NestJS API.</p>
+  <dl class="p-facts" data-reveal style="--i:2"><div><dt>For</dt><dd>Sportefy, sports venues and players in Pakistan</dd></div><div><dt>Built</dt><dd>At Slidey LLC, Karachi</dd></div><div><dt>When</dt><dd>Nov 2024 to Feb 2025</dd></div><div><dt>See it</dt><dd class="see"><a class="link-plain" href="https://apps.apple.com/us/app/sportefy/id6753986088">App Store</a><a class="link-plain" href="https://play.google.com/store/apps/details?id=com.sportefypakistan.app">Play Store</a><a class="link-plain" href="/assets/decks/Sportefy.pdf">Project deck (PDF, 6.0 MB)</a></dd></div></dl>
+</section>
+<section class="p-run wrap" aria-label="Screens">
+  <figure class="lead-frame"><img src="/assets/img/sportefy/admin-command-center-1600.webp" width="1600" height="794" alt="Sportefy admin command centre: credits, cash collected and due, booked slots, and occupancy and revenue per court" fetchpriority="high" decoding="async"></figure>
+  <div class="cells"><figure class="cell cell-phone" data-reveal style="--i:0"><img src="/assets/img/sportefy/app-home-188.webp" width="188" height="400" alt="Sportefy app home: the player&#x27;s credits, buttons to create or join a match, and nearby venues with photos" loading="lazy" decoding="async"><figcaption>Home</figcaption></figure><figure class="cell cell-phone" data-reveal style="--i:1"><img src="/assets/img/sportefy/app-booking-details-188.webp" width="188" height="400" alt="Sportefy app booking screen: a football pitch photo, a date picker, an available time slot and match type options" loading="lazy" decoding="async"><figcaption>Booking details</figcaption></figure><figure class="cell" data-reveal style="--i:2"><img src="/assets/img/sportefy/admin-available-slots-806.webp" width="806" height="400" alt="Sportefy admin available slots: a two-week timeline of bookable and unavailable hours for one court" loading="lazy" decoding="async"><figcaption>Available slots</figcaption></figure><figure class="cell cell-phone" data-reveal style="--i:3"><img src="/assets/img/sportefy/app-checkout-188.webp" width="188" height="400" alt="Sportefy app checkout: booking type, date and time, the venue&#x27;s location, a price breakdown in credits and a Book Now button" loading="lazy" decoding="async"><figcaption>Checkout</figcaption></figure><figure class="cell" data-reveal style="--i:4"><img src="/assets/img/sportefy/admin-manual-bookings-806.webp" width="806" height="400" alt="Sportefy admin manual bookings: a list of bookings with venue, start and end, amount paid, balance and status" loading="lazy" decoding="async"><figcaption>Manual bookings</figcaption></figure></div>
+</section>
+<section class="p-built wrap grid" aria-labelledby="built-h">
+  <div class="p-built-side">
+    <h2 id="built-h" data-reveal>What I built</h2>
+    <h3 class="p-stack-h" data-reveal style="--i:1">Built with</h3>
+    <ul class="p-stack" data-reveal style="--i:2"><li>NestJS</li><li>Flutter</li><li>Next.js</li><li>Prisma</li><li>PostgreSQL</li><li>Supabase</li><li>Paymob</li><li>Railway</li><li>Vercel</li><li>GitHub Actions</li></ul>
+  </div>
+  <div class="p-built-text"><p data-reveal><b>The app.</b> 21 feature modules, 823 passing tests, BLoC with clean architecture; offline request queue with replay, automatic token refresh, fault-tolerant parsing.</p><p data-reveal><b>The features.</b> QR check-in, wallet checkout, realtime match chat and notifications on Supabase Realtime; server-driven version gate with hard and soft update prompts.</p><p data-reveal><b>The API.</b> Next.js admin dashboard over a NestJS API: 48 domain modules, 190+ versioned REST endpoints, additive-only /v1 contract with OpenAPI drift gates in CI; no release broke older installs.</p><p data-reveal><b>The payments.</b> Payments domain (Paymob behind a pluggable gateway adapter, wallet and credits ledger, promo codes, PDF receipts); multi-actor RBAC from a shared permission matrix; API migrated from EC2 to Railway.</p></div>
+</section>
+<nav class="p-next wrap" aria-label="Next project">
+  <a href="/work/etg/"><span class="p-next-k">Next</span><span class="p-next-n">ETG Platform</span></a>
+</nav>
+<section class="contact wrap grid" aria-labelledby="contact-q">
+  <p class="contact-line" data-reveal>Send me the brief for your app, your payments or your voice agent, and I will reply with a scope.</p>
+  <figure class="contact-photo" data-reveal style="--i:1"><img src="/assets/img/photo/karachi-from-above-sq340.webp" width="340" height="340" alt="Karachi from above: rooftops running to the white dome of the Mazar-e-Quaid, with a red-roofed church and its spires in the foreground" loading="lazy" decoding="async" data-drift></figure>
+  <div class="contact-links" data-reveal style="--i:2">
+    <p class="contact-q" id="contact-q">Prefer a platform?</p>
+    <a class="link-plain" href="mailto:z.mughal.24648@gmail.com">z.mughal.24648@gmail.com</a>
+    <a class="link-plain" href="https://www.upwork.com/freelancers/zohaibmughal" rel="me">Upwork</a>
+    <p class="contact-place">Karachi, Pakistan, on UTC+5.</p>
   </div>
 </section>
-
-<section style="padding-top:0">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow"><span class="accent">Architecture &amp; Stack</span></span>
-      <h2>Two clients, one versioned contract.</h2>
-    </div>
-    <div class="arch reveal" role="list" aria-label="Architecture layers">
-      <div class="layer" role="listitem"><span class="layer-label">Clients</span><div class="layer-nodes">
-        <div class="lnode"><span class="t">Flutter app</span><span class="s">iOS + Android · BLoC</span></div>
-        <div class="lnode"><span class="t">Next.js 16 admin</span><span class="s">Ops dashboard</span></div>
-      </div></div>
-      <div class="layer-join" aria-hidden="true"></div>
-      <div class="layer" role="listitem"><span class="layer-label">Contract</span><div class="layer-nodes">
-        <div class="lnode"><span class="t">/v1 REST</span><span class="s">Additive-only · OpenAPI gates</span></div>
-      </div></div>
-      <div class="layer-join" aria-hidden="true"></div>
-      <div class="layer" role="listitem"><span class="layer-label">Core</span><div class="layer-nodes">
-        <div class="lnode hot"><span class="t">NestJS 11</span><span class="s">48 modules · layered use-cases</span></div>
-      </div></div>
-      <div class="layer-join" aria-hidden="true"></div>
-      <div class="layer" role="listitem"><span class="layer-label">Data</span><div class="layer-nodes">
-        <div class="lnode"><span class="t">Prisma 7 · PostgreSQL</span><span class="s">On Supabase</span></div>
-        <div class="lnode"><span class="t">Supabase Realtime</span><span class="s">Match chat · RLS</span></div>
-        <div class="lnode"><span class="t">Paymob</span><span class="s">Payments</span></div>
-      </div></div>
-    </div>
-    <div class="arch-cols reveal">
-      <div>
-        <div class="arch-col-label">Stack</div>
-        <div class="stackrow"><span class="stacklabel">Mobile</span><div class="chips"><span class="chip">Flutter 3 · BLoC</span></div></div>
-        <div class="stackrow"><span class="stacklabel">Admin</span><div class="chips"><span class="chip">Next.js</span><span class="chip">React</span><span class="chip">Tailwind</span></div></div>
-        <div class="stackrow"><span class="stacklabel">Backend</span><div class="chips"><span class="chip">NestJS 11</span><span class="chip">Prisma 7</span><span class="chip">PostgreSQL</span></div></div>
-        <div class="stackrow"><span class="stacklabel">Realtime · Pay</span><div class="chips"><span class="chip">Supabase Realtime · RLS</span><span class="chip">Paymob</span></div></div>
-      </div>
-      <div>
-        <div class="arch-col-label">Key Decisions</div>
-        <div class="decision"><span class="n">01</span><span>Monorepo — NestJS backend &amp; Next.js admin share one typed contract &amp; RBAC package</span></div>
-        <div class="decision"><span class="n">02</span><span>Additive-only /v1 contract + server-driven version gating — zero breaking releases across a mixed-version install base</span></div>
-        <div class="decision"><span class="n">03</span><span>OpenAPI drift gates enforced in CI</span></div>
-      </div>
-    </div>
+</main>
+<footer class="tiles wrap" aria-label="Site">
+  <div class="tile t-statement">
+    <p class="t-big">Web and mobile products, built from an empty repo to production.</p>
+    <p class="t-small">© 2026 Zohaib Ali Mughal. Photograph: <a href="https://commons.wikimedia.org/w/index.php?curid=35157868">“Karachi from above”</a> by Bilalhassan88, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons.</p>
   </div>
-</section>
-
-<section style="padding-top:0">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow"><span class="accent">Walkthrough</span></span>
-      <h2>Across app and dashboard.</h2>
-    </div>
-
-    <div class="walk-group reveal">
-      <div class="walk-group-label">Consumer App · Flutter</div>
-      <div class="shots cols-3 phones">
-        <div class="shot"><div class="phone"><img width="600" height="1277" src="../../assets/img/sportefy/app-home.webp" alt="Sportefy app home — credits and nearby venues" loading="lazy"></div><div class="shot-cap">Home — credits &amp; nearby venues</div></div>
-        <div class="shot"><div class="phone"><img width="600" height="1277" src="../../assets/img/sportefy/app-booking-details.webp" alt="Sportefy slot booking and match setup" loading="lazy"></div><div class="shot-cap">Slot booking &amp; match setup</div></div>
-        <div class="shot"><div class="phone"><img width="600" height="1277" src="../../assets/img/sportefy/app-checkout.webp" alt="Sportefy checkout with credit pricing" loading="lazy"></div><div class="shot-cap">Checkout — credit pricing</div></div>
-      </div>
-    </div>
-
-    <div class="walk-group reveal">
-      <div class="walk-group-label">Admin Dashboard · Web</div>
-      <div class="shots">
-        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="596" src="../../assets/img/sportefy/admin-manual-bookings.webp" alt="Sportefy manual bookings and reconciliation" loading="lazy"></div><div class="shot-cap">Manual bookings &amp; reconciliation</div></div>
-        <div class="shot"><div class="frame"><div class="frame-bar"><i></i><i></i><i></i></div><img width="1200" height="596" src="../../assets/img/sportefy/admin-available-slots.webp" alt="Sportefy availability and slot management" loading="lazy"></div><div class="shot-cap">Availability &amp; slot management</div></div>
-      </div>
-    </div>
-
-    <p style="margin-top:36px; font-family:var(--font-mono); font-size:12.5px; color:var(--text-4); max-width:52em">Screens captured from the live product — app v1.4.8 on the App Store &amp; Play Store, and the production admin dashboard.</p>
+  <nav class="tile t-nav" aria-label="Footer">
+    <a href="/#work">Work</a><a href="/#build">What I build</a><a href="/#prices">Offers</a>
+    <a href="/#process">Process</a><a href="/#questions">Questions</a>
+    <a href="https://www.upwork.com/freelancers/zohaibmughal" rel="me">Upwork</a><a href="https://www.fiverr.com/users/zohaibmughal151" rel="me">Fiverr</a>
+  </nav>
+  <div class="tile t-time">
+    <p>Karachi, UTC+5</p>
+    <p class="t-clock">It is <time id="khi-time">daytime</time> there now.</p>
   </div>
-</section>
-
-<section class="impact">
-  <div class="container impact-grid reveal">
-    <div class="metrics">
-      <div class="metric"><span class="num">48</span><span class="cap">Domain modules</span></div>
-      <div class="metric"><span class="num">190+</span><span class="cap">/v1 endpoints</span></div>
-      <div class="metric"><span class="num">823</span><span class="cap">Flutter tests</span></div>
-    </div>
-    <p>Live on the App Store and Play Store with a Next.js ops dashboard behind it — shipping continuously with zero breaking releases across a mixed-version mobile install base.</p>
+  <div class="tile t-mail">
+    <p>Email</p>
+    <a class="t-addr" href="mailto:z.mughal.24648@gmail.com">z.mughal.24648@gmail.com</a>
   </div>
-</section>
-
-<section>
-  <div class="container" style="display:grid; gap:20px">
-    <a class="next-card reveal" data-accent="plexor" href="../plexor/">
-      <div>
-        <div class="k">Next case study</div>
-        <h3>Plexor — AI-Based Surveillance System</h3>
-      </div>
-      <span class="arrow">→</span>
-    </a>
-    <div class="contact-row reveal">
-      <a class="btn btn-primary" href="mailto:z.mughal.24648@gmail.com">z.mughal.24648@gmail.com</a>
-      <a class="btn btn-ghost" href="../../assets/decks/Sportefy.pdf" download>Download Sportefy deck (PDF)</a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-inner">
-    <span>© 2026 Zohaib Ali Mughal</span>
-    <a href="../../#work">All work</a>
-    <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">Back to top ↑</a>
-  </div>
+  <div class="tile t-mark" aria-hidden="true"><span>Zohaib Ali Mughal</span></div>
+  <a class="tile t-go" href="mailto:z.mughal.24648@gmail.com?subject=Project%20enquiry&amp;body=Hi%20Zohaib%2C%0A%0AWhat%20I%20need%20built%3A%0A%0AWhen%20I%20need%20it%3A%0A%0ABudget%3A%0A"><span>Start a project</span><svg class="arrow" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M10 38 38 10M16 10h22v22" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square"/></svg></a>
 </footer>
-
-<script src="../../assets/js/lenis.min.js"></script>
-<script src="../../assets/js/main.js"></script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>

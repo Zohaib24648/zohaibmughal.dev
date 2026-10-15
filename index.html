@@ -1,320 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Zohaib Ali Mughal — Full-Stack Engineer</title>
-<meta name="description" content="Full-stack product engineering across AI surveillance, sales operations, live-events staffing, field-service operations and sports booking — from schema design to CI/CD and store release.">
-<meta property="og:title" content="Zohaib Ali Mughal — Full-Stack Engineer">
-<meta property="og:description" content="Five production platforms, built end to end. TypeScript, Flutter, payments, realtime.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://zohaibmughal.dev/">
-<meta property="og:image" content="https://zohaibmughal.dev/assets/img/og/home.jpg">
-<meta name="twitter:card" content="summary_large_image">
+<title>Zohaib Ali Mughal builds web and mobile products</title>
+<meta name="description" content="Independent full-stack and mobile developer in Karachi. Web apps, Flutter apps, payments and voice agents, from an empty repo to production. Fixed-price offers to start.">
 <link rel="canonical" href="https://zohaibmughal.dev/">
-<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Zohaib Ali Mughal builds web and mobile products">
+<meta property="og:description" content="Independent full-stack and mobile developer in Karachi. Web apps, Flutter apps, payments and voice agents, from an empty repo to production. Fixed-price offers to start.">
+<meta property="og:url" content="https://zohaibmughal.dev/">
+<meta property="og:image" content="https://zohaibmughal.dev/assets/img/etg/admin-dashboard-1200.webp">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1c1c1c">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/SchibstedGrotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
 <script>document.documentElement.classList.add('js')</script>
-<link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-
-<nav class="nav" aria-label="Main">
-  <div class="nav-inner">
-    <a class="nav-brand" href="#top">Zohaib Ali Mughal <span class="mono">/ FULL-STACK</span></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">MENU</button>
-    <div class="nav-links" id="nav-links">
-      <a href="#work">Work</a>
-      <a href="#skills">Skills</a>
-      <a href="#about">About</a>
-      <a class="nav-cta" href="#contact">Contact</a>
-    </div>
+<body class="home">
+<a class="skip" href="#work">Skip to the work</a>
+<main>
+<section class="hero" aria-label="Introduction">
+  <div class="panel" id="scope"><div class="panel-say" style="--i:0"><p class="panel-line">I build your web or mobile product, from an empty repo to production.</p><p class="scoper-out" id="scoper-out" aria-live="polite">Fixed-price offers for payments, web apps and Flutter apps.</p></div><div class="scoper" role="group" aria-labelledby="scoper-q" style="--i:1"><p id="scoper-q" class="scoper-q">What do you need built?</p><div class="chips"><a class="chip" href="#price-web" data-need="web">Web app</a><a class="chip" href="#price-mobile" data-need="mobile">Mobile app</a><a class="chip" href="#price-payments" data-need="payments">Payments</a><a class="chip" href="#price-other" data-need="voice">Voice agent</a><a class="chip" href="#price-other" data-need="backend">API and backend</a></div></div><a class="button" id="start" href="mailto:z.mughal.24648@gmail.com?subject=Project%20enquiry&amp;body=Hi%20Zohaib%2C%0A%0AWhat%20I%20need%20built%3A%0A%0AWhen%20I%20need%20it%3A%0A%0ABudget%3A%0A" style="--i:2">Start a project</a><nav class="panel-links" aria-label="Sections" style="--i:3"><a href="#work">Work</a><a href="#prices">Offers</a><a href="#questions">Questions</a></nav><h1 class="panel-mark" style="--i:4">Zohaib Ali Mughal</h1></div>
+  <div class="sheet" id="sheet"><div class="col c1" style="--off:0px;--c:0"><figure class="frame" data-p="etg" data-tags="web mobile payments backend" style="--f:0"><img src="/assets/img/etg/admin-dashboard-480.webp" width="480" height="249" alt="ETG operations dashboard: counts of jobs today, technicians working and jobs blocked, a Needs Action list of blocked field jobs with Resolve block buttons, and quick actions" loading="lazy" decoding="async"><figcaption class="strip s1">ETG Platform</figcaption></figure><figure class="frame" data-p="voice-intake" data-tags="voice backend" style="--f:10"><img src="/assets/img/voice-intake/dashboard-patients-480.webp" width="480" height="276" alt="Voice intake dashboard: a table of twelve registered patients with date of birth, phone, location and registration date (demo data)" loading="lazy" decoding="async"><figcaption class="strip s2">Voice intake</figcaption></figure><figure class="frame m-hide" data-p="hyss" data-tags="web mobile payments backend" style="--f:12"><img src="/assets/img/hyss/fl-events-480.webp" width="480" height="1067" alt="Hyss freelancer app: a confirmed four-day festival assignment with dates, position, day rate, venue and client" loading="lazy" decoding="async"><figcaption class="strip s3">Hyss</figcaption></figure><figure class="frame m-hide" data-p="voice-intake" data-tags="voice backend" style="--f:12"><img src="/assets/img/voice-intake/patient-record-480.webp" width="480" height="276" alt="Voice intake patient record: identity, contact, address, insurance and the booked appointment (demo data)" loading="lazy" decoding="async"><figcaption class="strip s4">Voice intake</figcaption></figure><figure class="frame m-hide" data-p="sportefy" data-tags="web mobile payments backend" style="--f:12"><img src="/assets/img/sportefy/app-checkout-480.webp" width="480" height="1022" alt="Sportefy app checkout: booking type, date and time, the venue&#x27;s location, a price breakdown in credits and a Book Now button" loading="lazy" decoding="async"><figcaption class="strip s1">Sportefy</figcaption></figure></div><div class="mid"><div class="col c2 top" style="--c:1"><figure class="frame" data-p="sportefy" data-tags="web mobile payments backend" style="--f:1"><img src="/assets/img/sportefy/app-home-480.webp" width="480" height="1022" alt="Sportefy app home: the player&#x27;s credits, buttons to create or join a match, and nearby venues with photos" fetchpriority="high" decoding="async"><figcaption class="strip s1">Sportefy</figcaption></figure><figure class="frame" data-p="conek" data-tags="web backend" style="--f:11"><img src="/assets/img/conek/quote-detail-480.webp" width="480" height="278" alt="Conek quote detail: quote, sales order and customer details above a list of barrier products with prices and quantities" fetchpriority="high" decoding="async"><figcaption class="strip s2">Conek</figcaption></figure></div><div class="col c3 top" style="--c:2"><figure class="frame" data-p="hyss" data-tags="web mobile payments backend" style="--f:2"><img src="/assets/img/hyss/employer-dashboard-480.webp" width="480" height="271" alt="Hyss employer dashboard: upcoming events, events needing staffing and pending worker confirmations, with two upcoming events listed" fetchpriority="high" decoding="async"><figcaption class="strip s3">Hyss</figcaption></figure><figure class="frame m-hide" data-p="etg" data-tags="web mobile payments backend" style="--f:12"><img src="/assets/img/etg/app-accept-480.webp" width="400" height="867" alt="ETG technician app: a warehouse job with its customer, site and address, the scheduled time and an Accept job button" fetchpriority="high" decoding="async"><figcaption class="strip s4">ETG Platform</figcaption></figure></div><div class="col c4 top" style="--c:3"><figure class="frame" data-p="plexor" data-tags="web backend" style="--f:3"><img src="/assets/img/plexor/theft-480.webp" width="480" height="277" alt="Plexor potential theft queue: camera snapshots of flagged incidents with store, camera, time, validation status and priority" loading="lazy" decoding="async"><figcaption class="strip s1">Plexor</figcaption></figure><figure class="frame m-hide" data-p="sportefy" data-tags="web mobile payments backend" style="--f:12"><img src="/assets/img/sportefy/app-booking-details-480.webp" width="480" height="1022" alt="Sportefy app booking screen: a football pitch photo, a date picker, an available time slot and match type options" loading="lazy" decoding="async"><figcaption class="strip s2">Sportefy</figcaption></figure></div><div class="col c5 top" style="--c:4"><figure class="frame" data-p="voice-intake" data-tags="voice backend" style="--f:4"><img src="/assets/img/voice-intake/call-transcript-480.webp" width="480" height="276" alt="Voice intake dashboard: a patient&#x27;s booked appointment and the transcript of the call in which the agent registered them" loading="lazy" decoding="async"><figcaption class="strip s3">Voice intake</figcaption></figure><figure class="frame m-hide" data-p="hyss" data-tags="web mobile payments backend" style="--f:12"><img src="/assets/img/hyss/crew-roster-480.webp" width="480" height="271" alt="Hyss crew roster: 190 workers grouped by audio and video position, each with name, city and source" loading="lazy" decoding="async"><figcaption class="strip s4">Hyss</figcaption></figure></div><div class="spacer" aria-hidden="true"></div><div class="col c2 bottom" style="--c:1"><figure class="frame" data-p="etg" data-tags="web mobile payments backend" style="--f:6"><img src="/assets/img/etg/admin-calendar-480.webp" width="480" height="249" alt="ETG scheduling command centre: a week of field jobs laid out per technician, with counts of jobs today, in progress, blocked and unassigned" loading="lazy" decoding="async"><figcaption class="strip s1">ETG Platform</figcaption></figure><figure class="frame m-hide" data-p="voice-intake" data-tags="voice backend" style="--f:12"><img src="/assets/img/voice-intake/call-spanish-480.webp" width="480" height="276" alt="Voice intake dashboard: a call where the caller switched to Spanish, with the full Spanish transcript" loading="lazy" decoding="async"><figcaption class="strip s2">Voice intake</figcaption></figure></div><div class="col c3 bottom" style="--c:2"><figure class="frame" data-p="sportefy" data-tags="web mobile payments backend" style="--f:7"><img src="/assets/img/sportefy/admin-command-center-480.webp" width="480" height="238" alt="Sportefy admin command centre: credits, cash collected and due, booked slots, and occupancy and revenue per court" loading="lazy" decoding="async"><figcaption class="strip s3">Sportefy</figcaption></figure><figure class="frame m-hide" data-p="conek" data-tags="web backend" style="--f:12"><img src="/assets/img/conek/pdf-wizard-480.webp" width="480" height="278" alt="Conek quote PDF wizard: the first of eight steps, the cover page, with title, reference, customer, date and language" loading="lazy" decoding="async"><figcaption class="strip s4">Conek</figcaption></figure></div><div class="col c4 bottom" style="--c:3"><figure class="frame" data-p="hyss" data-tags="web mobile payments backend" style="--f:8"><img src="/assets/img/hyss/fl-offers-480.webp" width="480" height="1067" alt="Hyss freelancer app: job offers with dates, venue, day rate and Confirm, Acknowledge and Decline buttons" loading="lazy" decoding="async"><figcaption class="strip s1">Hyss</figcaption></figure><figure class="frame m-hide" data-p="etg" data-tags="web mobile payments backend" style="--f:12"><img src="/assets/img/etg/admin-invoice-480.webp" width="480" height="249" alt="ETG invoice matching: supplier invoices matched against bank payments, each row with its match strength and a status such as Ready for reconciliation or Exception" loading="lazy" decoding="async"><figcaption class="strip s2">ETG Platform</figcaption></figure></div><div class="col c5 bottom" style="--c:4"><figure class="frame" data-p="plexor" data-tags="web backend" style="--f:9"><img src="/assets/img/plexor/cameras-480.webp" width="480" height="277" alt="Plexor camera wall: a grid of a store&#x27;s camera feeds, several showing aisles and the counter" loading="lazy" decoding="async"><figcaption class="strip s3">Plexor</figcaption></figure><figure class="frame m-hide" data-p="sportefy" data-tags="web mobile payments backend" style="--f:12"><img src="/assets/img/sportefy/admin-available-slots-480.webp" width="480" height="238" alt="Sportefy admin available slots: a two-week timeline of bookable and unavailable hours for one court" loading="lazy" decoding="async"><figcaption class="strip s4">Sportefy</figcaption></figure></div></div><div class="col c6" style="--off:-70px;--c:5"><figure class="frame" data-p="conek" data-tags="web backend" style="--f:5"><img src="/assets/img/conek/projects-480.webp" width="480" height="278" alt="Conek projects table: quote references, customers, opportunities, status, amounts, priority and owner" loading="lazy" decoding="async"><figcaption class="strip s2">Conek</figcaption></figure><figure class="frame m-hide" data-p="plexor" data-tags="web backend" style="--f:12"><img src="/assets/img/plexor/visual-pos-480.webp" width="480" height="277" alt="Plexor visual POS review: a pending transaction flagged from the till camera with its store, camera and priority" loading="lazy" decoding="async"><figcaption class="strip s3">Plexor</figcaption></figure><figure class="frame m-hide" data-p="plexor" data-tags="web backend" style="--f:12"><img src="/assets/img/plexor/phone-usage-detail-480.webp" width="480" height="277" alt="Plexor phone use incident: the till camera&#x27;s view with the detection boxed and a prompt asking the reviewer to confirm it" loading="lazy" decoding="async"><figcaption class="strip s4">Plexor</figcaption></figure><figure class="frame m-hide" data-p="etg" data-tags="web mobile payments backend" style="--f:12"><img src="/assets/img/etg/app-working-480.webp" width="400" height="867" alt="ETG technician app on the clock: a running timer for the job, a note that labour is billed from actual clock time, and a Clock off and complete button" loading="lazy" decoding="async"><figcaption class="strip s1">ETG Platform</figcaption></figure><figure class="frame m-hide" data-p="hyss" data-tags="web mobile payments backend" style="--f:12"><img src="/assets/img/hyss/employer-events-480.webp" width="480" height="271" alt="Hyss events list for an employer: dates, events, clients, locations, staffing status, vacancies and labour totals" loading="lazy" decoding="async"><figcaption class="strip s2">Hyss</figcaption></figure></div></div>
+  <script type="application/json" id="scoper-data">{"needs": {"web": {"label": "Web app", "offer": "web", "proof": ["etg", "hyss", "conek", "plexor", "sportefy"], "note": ""}, "mobile": {"label": "Mobile app", "offer": "mobile", "proof": ["sportefy", "hyss", "etg"], "note": ""}, "payments": {"label": "Payments", "offer": "payments", "proof": ["hyss", "sportefy", "etg"], "note": ""}, "voice": {"label": "Voice agent", "offer": "other", "proof": ["voice-intake"], "note": "A phone agent like Voice intake, quoted after a short call about your flow."}, "backend": {"label": "API and backend", "offer": "other", "proof": ["etg", "conek", "sportefy", "voice-intake"], "note": "Typed APIs, event-driven services and integrations, quoted per project."}}, "offers": {"payments": {"name": "Payments", "from": "Fixed price", "days": "5 days"}, "web": {"name": "Web app", "from": "Fixed price", "days": "14 days"}, "mobile": {"name": "Flutter app", "from": "Fixed price", "days": "14 days"}, "other": {"name": "Other work", "from": "Quoted", "days": "Agreed with you"}}, "email": "z.mughal.24648@gmail.com"}</script>
+</section>
+<section class="work wrap" id="work" aria-labelledby="work-h">
+  <div class="ledger">
+    <h2 id="work-h" data-reveal>Shipped work</h2>
+    <ul class="ledger-list" data-reveal style="--i:1"><li><a href="/work/etg/" data-prev="/assets/img/etg/admin-dashboard-880.webp"><img class="row-img" src="/assets/img/etg/admin-dashboard-880.webp" width="880" height="456" alt="" loading="lazy" decoding="async"><span class="l-name">ETG Platform</span><span class="l-kind">Field-service platform</span><span class="l-year">2026</span></a></li><li><a href="/work/plexor/" data-prev="/assets/img/plexor/theft-880.webp"><img class="row-img" src="/assets/img/plexor/theft-880.webp" width="880" height="507" alt="" loading="lazy" decoding="async"><span class="l-name">Plexor</span><span class="l-kind">Retail computer vision</span><span class="l-year">2026</span></a></li><li><a href="/work/hyss/" data-prev="/assets/img/hyss/employer-dashboard-880.webp"><img class="row-img" src="/assets/img/hyss/employer-dashboard-880.webp" width="880" height="497" alt="" loading="lazy" decoding="async"><span class="l-name">Hyss</span><span class="l-kind">Event staffing marketplace</span><span class="l-year">2026</span></a></li><li><a href="/work/voice-intake/" data-prev="/assets/img/voice-intake/call-transcript-880.webp"><img class="row-img" src="/assets/img/voice-intake/call-transcript-880.webp" width="880" height="507" alt="" loading="lazy" decoding="async"><span class="l-name">Voice intake</span><span class="l-kind">Voice AI agent (my own)</span><span class="l-year">2026</span></a></li><li><a href="/work/conek/" data-prev="/assets/img/conek/projects-880.webp"><img class="row-img" src="/assets/img/conek/projects-880.webp" width="880" height="510" alt="" loading="lazy" decoding="async"><span class="l-name">Conek</span><span class="l-kind">Quote to cash for A-SAFE</span><span class="l-year">2025</span></a></li><li><a href="/work/sportefy/" data-prev="/assets/img/sportefy/app-home-880.webp"><img class="row-img" src="/assets/img/sportefy/app-home-880.webp" width="880" height="1873" alt="" loading="lazy" decoding="async"><span class="l-name">Sportefy</span><span class="l-kind">Booking app, iOS and Android</span><span class="l-year">2024</span></a></li></ul>
+    <figure class="ledger-preview on" aria-hidden="true" data-reveal style="--i:2"><img src="/assets/img/etg/admin-dashboard-880.webp" alt="" width="880" height="456" loading="lazy" decoding="async"></figure>
   </div>
-</nav>
-
-<header class="hero" id="top">
-  <div class="container">
-    <div class="hero-main">
-      <span class="eyebrow">Product &amp; Engineering Portfolio</span>
-      <h1>I build production platforms end&nbsp;to&nbsp;end.</h1>
-      <p class="lede">Full-stack engineer working in TypeScript (Next.js, NestJS, Fastify, tRPC, Prisma, PostgreSQL) and Flutter — owning everything from schema design to CI/CD and store release, across AI surveillance, sales operations, live-events staffing, field-service operations and sports booking.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-primary" href="#work">View work</a>
-        <a class="btn btn-ghost" href="#contact">Get in touch</a>
-        <span class="dot-badge">Available for contract &amp; freelance</span>
-      </div>
-    </div>
-    <nav class="hero-index" aria-label="Case studies">
-      <a class="hi-row" data-accent="etg" href="work/etg/"><span class="hi-n">01</span><span class="hi-dot" aria-hidden="true"></span><span class="hi-name">ETG</span><span class="hi-sector">Field-Service Ops</span></a>
-      <a class="hi-row" data-accent="hyss" href="work/hyss/"><span class="hi-n">02</span><span class="hi-dot" aria-hidden="true"></span><span class="hi-name">Hyss</span><span class="hi-sector">Events Staffing</span></a>
-      <a class="hi-row" data-accent="conek" href="work/conek/"><span class="hi-n">03</span><span class="hi-dot" aria-hidden="true"></span><span class="hi-name">Conek</span><span class="hi-sector">Sales Operations</span></a>
-      <a class="hi-row" data-accent="sportefy" href="work/sportefy/"><span class="hi-n">04</span><span class="hi-dot" aria-hidden="true"></span><span class="hi-name">Sportefy</span><span class="hi-sector">Sports Booking</span></a>
-      <a class="hi-row" data-accent="plexor" href="work/plexor/"><span class="hi-n">05</span><span class="hi-dot" aria-hidden="true"></span><span class="hi-name">Plexor</span><span class="hi-sector">AI Surveillance</span></a>
-    </nav>
-  </div>
-</header>
-
-<div class="proof reveal">
-  <div class="container">
-    <div class="metric"><span class="num">5</span><span class="cap">Platforms built end to end</span></div>
-    <div class="metric"><span class="num">3</span><span class="cap">Live SaaS products</span></div>
-    <div class="metric"><span class="num">30,000+</span><span class="cap">Automated tests shipped</span></div>
-    <div class="metric"><span class="num">2+</span><span class="cap">Years shipping production SaaS</span></div>
-  </div>
-</div>
-
-<section id="work">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow"><span class="accent">01</span> — Selected Work</span>
-      <h2>Five platforms, five domains.</h2>
-      <p class="lede">Each one shipped to production. Click through for the full case study — problem, architecture, walkthrough and results.</p>
-    </div>
-
-    <div class="work-list">
-
-      <a class="work-card reveal" data-accent="etg" href="work/etg/">
-        <span class="glow"></span>
-        <div class="work-info">
-          <span class="work-index"><span class="n">01</span><span class="sep"></span>Field-Service Ops</span>
-          <img width="228" height="60" class="work-logo" src="assets/img/etg-logo-white.svg" alt="Evolution Technology Group">
-          <h3>Enforcement&#8209;First Field&#8209;Service OS</h3>
-          <p>An operations platform for an electrical, security, AV &amp; telecom group — five portals over one decision gate, spanning quote-to-cash, procurement, workforce and billing.</p>
-          <div class="work-metrics">
-            <div class="metric"><span class="num">$5k/wk</span><span class="cap">Billing leakage closed</span></div>
-            <div class="metric"><span class="num">1,000+</span><span class="cap">tRPC procedures</span></div>
-            <div class="metric"><span class="num">30K+</span><span class="cap">Automated tests</span></div>
-          </div>
-          <span class="work-link">Read case study →</span>
-        </div>
-        <div class="work-media"><img width="1000" height="923" src="assets/img/etg-hero-card.webp" alt="ETG dashboards" loading="lazy"></div>
-      </a>
-
-      <a class="work-card reveal" data-accent="hyss" href="work/hyss/">
-        <span class="glow"></span>
-        <div class="work-info">
-          <span class="work-index"><span class="n">02</span><span class="sep"></span>Events Staffing</span>
-          <img width="145" height="72" class="work-logo" src="assets/img/hyss-logo-white.png" alt="Hyss">
-          <h3>AV &amp; Live Events Staffing Platform</h3>
-          <p>Event companies staff certified freelance crew — matched, scheduled, paid — across web, iOS and Android from one codebase.</p>
-          <div class="work-metrics">
-            <div class="metric"><span class="num">93</span><span class="cap">Data models</span></div>
-            <div class="metric"><span class="num">~340</span><span class="cap">tRPC procedures</span></div>
-            <div class="metric"><span class="num">3</span><span class="cap">Platforms · one codebase</span></div>
-          </div>
-          <span class="work-link">Read case study →</span>
-        </div>
-        <div class="work-media"><img width="1000" height="923" src="assets/img/hyss-hero-card.webp" alt="Hyss dashboards" loading="lazy"></div>
-      </a>
-
-      <a class="work-card reveal" data-accent="conek" href="work/conek/">
-        <span class="glow"></span>
-        <div class="work-info">
-          <span class="work-index"><span class="n">03</span><span class="sep"></span>Sales Operations</span>
-          <img width="154" height="27" class="work-logo" src="assets/img/conek-logo-white.svg" alt="Conek">
-          <h3>Quotes &amp; Projects Tool for A&#8209;SAFE</h3>
-          <p>An internal sales platform — quote to sales order to invoice — wired into A&#8209;SAFE's CRM, Drawing Tool and Route 66 ecosystem.</p>
-          <div class="work-metrics">
-            <div class="metric"><span class="num">&lt;100<small>ms</small></span><span class="cap">Inter-service latency</span></div>
-            <div class="metric"><span class="num">500+</span><span class="cap">Automated tests</span></div>
-            <div class="metric"><span class="num">95%</span><span class="cap">Test coverage</span></div>
-          </div>
-          <span class="work-link">Read case study →</span>
-        </div>
-        <div class="work-media"><img width="1000" height="923" src="assets/img/conek-hero-card.webp" alt="Conek dashboards" loading="lazy"></div>
-      </a>
-
-      <a class="work-card reveal" data-accent="sportefy" href="work/sportefy/">
-        <span class="glow"></span>
-        <div class="work-info">
-          <span class="work-index"><span class="n">04</span><span class="sep"></span>Sports Booking</span>
-          <img width="354" height="72" class="work-logo" src="assets/img/sportefy-logo-white.png" alt="Sportefy">
-          <h3>Sports Venue Booking &amp; Matchmaking</h3>
-          <p>A B2B2C platform live in Pakistan — consumer Flutter app on the App Store &amp; Play Store, Next.js admin dashboard, versioned NestJS API.</p>
-          <div class="work-metrics">
-            <div class="metric"><span class="num">48</span><span class="cap">Domain modules</span></div>
-            <div class="metric"><span class="num">190+</span><span class="cap">Versioned /v1 endpoints</span></div>
-            <div class="metric"><span class="num">823</span><span class="cap">Flutter tests</span></div>
-          </div>
-          <span class="work-link">Read case study →</span>
-        </div>
-        <div class="work-media"><img width="1000" height="923" src="assets/img/sportefy-hero-card.webp" alt="Sportefy app and dashboard" loading="lazy"></div>
-      </a>
-
-      <a class="work-card reveal" data-accent="plexor" href="work/plexor/">
-        <span class="glow"></span>
-        <div class="work-info">
-          <span class="work-index"><span class="n">05</span><span class="sep"></span>AI Surveillance</span>
-          <img width="239" height="48" class="work-logo" src="assets/img/plexor-logo-white.svg" alt="Plexor">
-          <h3>AI-Based Surveillance System</h3>
-          <p>Computer-vision loss prevention for retail — theft, POS fraud and loitering flagged in real time across 100+ stores.</p>
-          <div class="work-metrics">
-            <div class="metric"><span class="num">100+</span><span class="cap">Stores monitored</span></div>
-            <div class="metric"><span class="num">~700<small>ms</small></span><span class="cap">Realtime inference</span></div>
-            <div class="metric"><span class="num">37+</span><span class="cap">Detection models</span></div>
-          </div>
-          <span class="work-link">Read case study →</span>
-        </div>
-        <div class="work-media"><img width="1000" height="923" src="assets/img/plexor-hero-card.webp" alt="Plexor dashboards" loading="lazy"></div>
-      </a>
-
-    </div>
-
-    <div class="projects" id="projects">
-      <div class="projects-head reveal">
-        <span class="eyebrow">Personal &amp; university projects</span>
-        <h3>Beyond client work.</h3>
-      </div>
-
-      <div class="project-grid">
-
-        <a class="project-card reveal" data-accent="voice" href="work/voice-intake/">
-          <span class="project-kind">Voice AI · 2026</span>
-          <h4>Voice AI Patient-Intake Agent</h4>
-          <p>A phone agent that registers new patients in English or Spanish. A Retell LLM agent with five tool-calling functions saves to Postgres only after the caller confirms a read-back.</p>
-          <div class="project-facts"><span><b>5</b> tool-calling functions</span><span><b>53</b> passing tests</span></div>
-          <div class="chips"><span class="chip">TypeScript</span><span class="chip">Retell AI</span><span class="chip">Fastify</span><span class="chip">Zod</span><span class="chip">PostgreSQL</span><span class="chip">Next.js</span></div>
-          <span class="work-link">Read case study →</span>
-        </a>
-
-        <a class="project-card reveal" data-accent="trading" href="work/trading-system/">
-          <span class="project-kind">Trading systems · 2026</span>
-          <h4>Crypto-Derivatives Trading System</h4>
-          <p>An event-driven TypeScript monorepo: strategy processes publish signals over Redis Streams to one execution service, and every trading limit lives in one pure risk function shared by the order gate and the settings screen.</p>
-          <div class="project-facts"><span><b>4</b> services, 8 packages</span><span><b>3,810</b> test cases</span></div>
-          <div class="chips"><span class="chip">TypeScript</span><span class="chip">Fastify</span><span class="chip">tRPC</span><span class="chip">Next.js</span><span class="chip">Redis Streams</span><span class="chip">PostgreSQL</span></div>
-          <span class="work-link">Read case study →</span>
-        </a>
-
-        <a class="project-card reveal" href="https://github.com/Zohaib24648/risksense-mlops" target="_blank" rel="noopener">
-          <span class="project-kind">MLOps · Final-year project, Meezan Bank Limited</span>
-          <h4>RiskSense, Loan-Default Pipeline</h4>
-          <p>A ZenML training pipeline with MLflow experiment tracking that predicts loan default on distributor-financing records, with KNN imputation, class weighting and five interchangeable classifiers.</p>
-          <div class="project-facts"><span><b>39,503</b> records</span><span><b>5</b> classifiers</span></div>
-          <div class="chips"><span class="chip">Python</span><span class="chip">ZenML</span><span class="chip">MLflow</span><span class="chip">scikit-learn</span><span class="chip">XGBoost</span></div>
-          <span class="work-link">View on GitHub ↗</span>
-        </a>
-
-        <a class="project-card reveal" data-accent="faculty" href="work/faculty-reviews/">
-          <span class="project-kind">University team project · 2024</span>
-          <h4>Faculty Reviews</h4>
-          <p>Course and instructor reviews for IBA students: a Flutter app, a React web app and a Node.js and MongoDB API. I wrote the API, the Flutter app and most of the web app in a three-person team.</p>
-          <div class="project-facts"><span><b>50</b> API endpoints</span><span><b>6</b> data models</span></div>
-          <div class="chips"><span class="chip">Flutter</span><span class="chip">React</span><span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">MongoDB</span></div>
-          <span class="work-link">Read case study →</span>
-        </a>
-
-      </div>
+</section>
+<section class="build wrap grid" id="build" aria-labelledby="build-h">
+  <h2 id="build-h" data-reveal>What I build</h2>
+  <div class="fgroup g1" data-reveal style="--i:0"><h3>Web apps</h3><ul class="fnames"><li data-desc="Five portals over one API for ETG, from operations to tokenised public links.">Role-based portals<span class="sr-only">: Five portals over one API for ETG, from operations to tokenised public links.</span></li><li data-desc="The Next.js admin panel behind Sportefy&#x27;s venues and bookings.">Admin dashboards<span class="sr-only">: The Next.js admin panel behind Sportefy’s venues and bookings.</span></li><li data-desc="Per-event crew chat for Hyss and match chat for Sportefy, on Supabase Realtime.">Realtime chat<span class="sr-only">: Per-event crew chat for Hyss and match chat for Sportefy, on Supabase Realtime.</span></li><li data-desc="Two-way Google and Apple calendar sync for Hyss crews.">Calendar sync<span class="sr-only">: Two-way Google and Apple calendar sync for Hyss crews.</span></li><li data-desc="Quote, approval and invoice in Hyss, with PDFs and tracked share links.">Quotes and invoices<span class="sr-only">: Quote, approval and invoice in Hyss, with PDFs and tracked share links.</span></li><li data-desc="Prioritised theft and fraud alerts routed to store and district managers in Plexor.">Alert routing<span class="sr-only">: Prioritised theft and fraud alerts routed to store and district managers in Plexor.</span></li></ul><p class="fsum">Portals, dashboards and the realtime parts, shipped for ETG, Hyss, Sportefy and Plexor.</p></div><div class="fgroup g2" data-reveal style="--i:1"><h3>Mobile apps</h3><ul class="fnames"><li data-desc="Sportefy&#x27;s Flutter app: 21 feature modules and 823 passing tests.">Flutter for iOS and Android<span class="sr-only">: Sportefy’s Flutter app: 21 feature modules and 823 passing tests.</span></li><li data-desc="Hyss serves web, iOS and Android from one Next.js codebase.">One codebase with Capacitor<span class="sr-only">: Hyss serves web, iOS and Android from one Next.js codebase.</span></li><li data-desc="Sportefy queues requests offline and replays them when the signal returns.">Offline queue and replay<span class="sr-only">: Sportefy queues requests offline and replays them when the signal returns.</span></li><li data-desc="Players check in at the venue with a QR code in Sportefy.">QR check-in<span class="sr-only">: Players check in at the venue with a QR code in Sportefy.</span></li><li data-desc="A server-driven version gate with hard and soft update prompts.">Update prompts<span class="sr-only">: A server-driven version gate with hard and soft update prompts.</span></li><li data-desc="Sportefy is live on the App Store and the Play Store.">Store releases<span class="sr-only">: Sportefy is live on the App Store and the Play Store.</span></li></ul><p class="fsum">Flutter for iOS and Android, or one web codebase shipped to both stores.</p></div><div class="fgroup g3" data-reveal style="--i:2"><h3>Payments and backends</h3><ul class="fnames"><li data-desc="Payout onboarding, three fee-split modes and idempotent webhooks for Hyss.">Stripe Connect payouts<span class="sr-only">: Payout onboarding, three fee-split modes and idempotent webhooks for Hyss.</span></li><li data-desc="Hybrid seat and usage-metered billing on Stripe for Hyss.">Metered billing<span class="sr-only">: Hybrid seat and usage-metered billing on Stripe for Hyss.</span></li><li data-desc="Sportefy&#x27;s wallet and credits ledger behind a pluggable Paymob adapter.">Wallets on Paymob<span class="sr-only">: Sportefy’s wallet and credits ledger behind a pluggable Paymob adapter.</span></li><li data-desc="ETG matches bank transactions to supplier invoices before a job is invoiced.">Bank reconciliation<span class="sr-only">: ETG matches bank transactions to supplier invoices before a job is invoiced.</span></li><li data-desc="1,000+ tRPC procedures over a 212-model schema at ETG.">Typed APIs with tRPC<span class="sr-only">: 1,000+ tRPC procedures over a 212-model schema at ETG.</span></li><li data-desc="190+ versioned endpoints at Sportefy; no release broke an older install.">Versioned REST<span class="sr-only">: 190+ versioned endpoints at Sportefy; no release broke an older install.</span></li><li data-desc="Microservices on NATS JetStream for A-SAFE&#x27;s quote-to-cash platform.">Event-driven services<span class="sr-only">: Microservices on NATS JetStream for A-SAFE’s quote-to-cash platform.</span></li><li data-desc="A phone agent that registers patients in English or Spanish through five tools.">Voice agents<span class="sr-only">: A phone agent that registers patients in English or Spanish through five tools.</span></li></ul><p class="fsum">Money handled carefully, typed APIs and services that keep working as they grow.</p></div>
+  <p class="fdesc" aria-hidden="true">Five portals over one API for ETG, from operations to tokenised public links.</p>
+</section>
+<section class="prices" id="prices" aria-labelledby="prices-h">
+  <div class="wrap">
+    <table class="ptable" data-reveal>
+      <caption class="sr-only">Fixed-price offers</caption>
+      <thead><tr><td class="ptable-h"><h2 id="prices-h">Fixed-price offers</h2></td><th scope="col" id="price-payments" data-offer="payments"><span class="plan">Payments</span><span class="price">Fixed price</span></th><th scope="col" id="price-web" data-offer="web"><span class="plan">Web app</span><span class="price">Fixed price</span></th><th scope="col" id="price-mobile" data-offer="mobile"><span class="plan">Flutter app</span><span class="price">Fixed price</span></th><th scope="col" id="price-other" data-offer="other"><span class="plan">Other work</span><span class="price">Quoted</span></th></tr></thead>
+      <tbody><tr><th scope="row">Delivered in</th><td data-offer="payments">5 days</td><td data-offer="web">14 days</td><td data-offer="mobile">14 days</td><td data-offer="other">Agreed with you</td></tr><tr><th scope="row">The start includes</th><td data-offer="payments">One Stripe payment flow (Checkout or Payment Links) with webhooks, taken from test mode to live.</td><td data-offer="web">Sign-in and one core feature in Next.js and PostgreSQL, deployed on your domain.</td><td data-offer="mobile">Up to six screens wired to your API, built in BLoC architecture for iOS and Android.</td><td data-offer="other">Voice agents, APIs and backends, payments beyond Stripe, or work inside your existing codebase.</td></tr><tr><th scope="row">It grows into</th><td data-offer="payments">Subscriptions or metered billing with a customer portal, then a Stripe Connect marketplace with payouts and fee splits.</td><td data-offer="web">Three or four features with admin basics and CI, then a full MVP with payments, tests and handover docs.</td><td data-offer="mobile">Sign-in, push notifications, offline caching and release builds, then submission to both stores.</td><td data-offer="other">Scoped with you before any work starts.</td></tr><tr class="row-actions"><td></td><td data-offer="payments"><a class="button button-dark" href="mailto:z.mughal.24648@gmail.com?subject=Project%20enquiry%3A%20Payments&amp;body=Hi%20Zohaib%2C%0A%0AI%20am%20interested%20in%3A%20Payments%0A%0AWhat%20I%20need%20built%3A%0A%0AWhen%20I%20need%20it%3A%0A">Start a project</a></td><td data-offer="web"><a class="button button-dark" href="mailto:z.mughal.24648@gmail.com?subject=Project%20enquiry%3A%20Web%20app&amp;body=Hi%20Zohaib%2C%0A%0AI%20am%20interested%20in%3A%20Web%20app%0A%0AWhat%20I%20need%20built%3A%0A%0AWhen%20I%20need%20it%3A%0A">Start a project</a></td><td data-offer="mobile"><a class="button button-dark" href="mailto:z.mughal.24648@gmail.com?subject=Project%20enquiry%3A%20Flutter%20app&amp;body=Hi%20Zohaib%2C%0A%0AI%20am%20interested%20in%3A%20Flutter%20app%0A%0AWhat%20I%20need%20built%3A%0A%0AWhen%20I%20need%20it%3A%0A">Start a project</a></td><td data-offer="other"><a class="button button-dark" href="mailto:z.mughal.24648@gmail.com?subject=Project%20enquiry%3A%20Other%20work&amp;body=Hi%20Zohaib%2C%0A%0AI%20am%20interested%20in%3A%20Other%20work%0A%0AWhat%20I%20need%20built%3A%0A%0AWhen%20I%20need%20it%3A%0A">Start a project</a></td></tr></tbody>
+    </table>
+    <div class="pblocks">
+      <h2 class="pblocks-h">Fixed-price offers</h2>
+      <div class="pblock" data-offer="payments"><p class="pblock-name">Payments</p><p class="pblock-price">Fixed price</p><dl><dt>Delivered in</dt><dd>5 days</dd><dt>The start includes</dt><dd>One Stripe payment flow (Checkout or Payment Links) with webhooks, taken from test mode to live.</dd><dt>It grows into</dt><dd>Subscriptions or metered billing with a customer portal, then a Stripe Connect marketplace with payouts and fee splits.</dd></dl><a class="button button-dark" href="mailto:z.mughal.24648@gmail.com?subject=Project%20enquiry%3A%20Payments&amp;body=Hi%20Zohaib%2C%0A%0AI%20am%20interested%20in%3A%20Payments%0A%0AWhat%20I%20need%20built%3A%0A%0AWhen%20I%20need%20it%3A%0A">Start a project</a></div><div class="pblock" data-offer="web"><p class="pblock-name">Web app</p><p class="pblock-price">Fixed price</p><dl><dt>Delivered in</dt><dd>14 days</dd><dt>The start includes</dt><dd>Sign-in and one core feature in Next.js and PostgreSQL, deployed on your domain.</dd><dt>It grows into</dt><dd>Three or four features with admin basics and CI, then a full MVP with payments, tests and handover docs.</dd></dl><a class="button button-dark" href="mailto:z.mughal.24648@gmail.com?subject=Project%20enquiry%3A%20Web%20app&amp;body=Hi%20Zohaib%2C%0A%0AI%20am%20interested%20in%3A%20Web%20app%0A%0AWhat%20I%20need%20built%3A%0A%0AWhen%20I%20need%20it%3A%0A">Start a project</a></div><div class="pblock" data-offer="mobile"><p class="pblock-name">Flutter app</p><p class="pblock-price">Fixed price</p><dl><dt>Delivered in</dt><dd>14 days</dd><dt>The start includes</dt><dd>Up to six screens wired to your API, built in BLoC architecture for iOS and Android.</dd><dt>It grows into</dt><dd>Sign-in, push notifications, offline caching and release builds, then submission to both stores.</dd></dl><a class="button button-dark" href="mailto:z.mughal.24648@gmail.com?subject=Project%20enquiry%3A%20Flutter%20app&amp;body=Hi%20Zohaib%2C%0A%0AI%20am%20interested%20in%3A%20Flutter%20app%0A%0AWhat%20I%20need%20built%3A%0A%0AWhen%20I%20need%20it%3A%0A">Start a project</a></div><div class="pblock" data-offer="other"><p class="pblock-name">Other work</p><p class="pblock-price">Quoted</p><dl><dt>Delivered in</dt><dd>Agreed with you</dd><dt>The start includes</dt><dd>Voice agents, APIs and backends, payments beyond Stripe, or work inside your existing codebase.</dd><dt>It grows into</dt><dd>Scoped with you before any work starts.</dd></dl><a class="button button-dark" href="mailto:z.mughal.24648@gmail.com?subject=Project%20enquiry%3A%20Other%20work&amp;body=Hi%20Zohaib%2C%0A%0AI%20am%20interested%20in%3A%20Other%20work%0A%0AWhat%20I%20need%20built%3A%0A%0AWhen%20I%20need%20it%3A%0A">Start a project</a></div>
     </div>
   </div>
 </section>
-
-<section id="skills" style="padding-top:0">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow"><span class="accent">02</span> — Skills &amp; Stack</span>
-      <h2>The toolbox.</h2>
-    </div>
-    <div class="reveal">
-      <div class="stackrow"><span class="stacklabel">Languages</span><div class="chips"><span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">Dart</span><span class="chip">SQL</span><span class="chip">Python</span></div></div>
-      <div class="stackrow"><span class="stacklabel">Frontend</span><div class="chips"><span class="chip">Next.js 16</span><span class="chip">React 19</span><span class="chip">Tailwind CSS</span><span class="chip">TanStack Query</span><span class="chip">Radix / shadcn UI</span></div></div>
-      <div class="stackrow"><span class="stacklabel">Mobile</span><div class="chips"><span class="chip">Flutter 3 · BLoC</span><span class="chip">Capacitor 6</span><span class="chip">App Store &amp; Play Store releases</span></div></div>
-      <div class="stackrow"><span class="stacklabel">Backend</span><div class="chips"><span class="chip">Node.js</span><span class="chip">NestJS 11</span><span class="chip">Fastify 5</span><span class="chip">tRPC 11</span><span class="chip">REST / OpenAPI</span><span class="chip">Zod</span><span class="chip">BullMQ</span><span class="chip">NATS JetStream</span></div></div>
-      <div class="stackrow"><span class="stacklabel">Data &amp; DevOps</span><div class="chips"><span class="chip">PostgreSQL</span><span class="chip">Prisma 7</span><span class="chip">Supabase</span><span class="chip">Redis</span><span class="chip">Docker</span><span class="chip">AWS</span><span class="chip">Railway</span><span class="chip">Vercel</span><span class="chip">GitHub Actions</span></div></div>
-      <div class="stackrow"><span class="stacklabel">Payments &amp; Quality</span><div class="chips"><span class="chip">Stripe Connect &amp; Billing</span><span class="chip">Paymob</span><span class="chip">Airwallex</span><span class="chip">Sentry</span><span class="chip">Jest</span><span class="chip">Vitest</span><span class="chip">Playwright</span><span class="chip">Testcontainers</span></div></div>
-    </div>
+<section class="process wrap" id="process" aria-labelledby="process-h">
+  <div class="runin">
+    <h2 id="process-h" data-reveal>How a project runs</h2>
+    <div class="step" data-reveal style="--i:0"><p><b>To begin,</b> send the brief by email, on Upwork or on Fiverr. I reply with an honest scope: what fits your budget and your date, and what does not.</p></div><div class="step" data-reveal style="--i:1"><p><b>Before any screen,</b> the API contract is typed and agreed, so the web app, the mobile app and the backend build against one definition and cannot drift apart.</p><figure class="evidence" data-reveal><img src="/assets/img/voice-intake/code-register-tool-1200.webp" width="1200" height="691" alt="Voice intake: the register tool takes its fields from the same schema as the REST API." loading="lazy" decoding="async"><figcaption>Voice intake: the register tool takes its fields from the same schema as the REST API.</figcaption></figure></div><div class="step" data-reveal style="--i:0"><p><b>Every change</b> is tested in CI before it ships. ETG carries 30,000+ tests; Sportefy’s Flutter app carries 823.</p></div><div class="step" data-reveal style="--i:1"><p><b>During your working day,</b> I am online in your hours: Karachi is on UTC+5 and I overlap with US, EU and Australian teams, and progress reaches you in writing.</p><figure class="evidence" data-reveal><img src="/assets/img/photo/karachi-from-above-1280.webp" width="1280" height="688" alt="Karachi from above: rooftops running to the white dome of the Mazar-e-Quaid, with a red-roofed church and its spires in the foreground" loading="lazy" decoding="async" data-drift><figcaption>Karachi, on UTC+5, between the working days of Europe and Australia.</figcaption></figure></div><div class="step" data-reveal style="--i:0"><p><b>At the end,</b> it is deployed on your domain or released to the App Store and the Play Store, with handover notes for whoever runs it next.</p><figure class="evidence evidence-row" data-reveal><div class="frames3"><img src="/assets/img/sportefy/app-home-301.webp" width="301" height="641" alt="Sportefy home" loading="lazy" decoding="async"><img src="/assets/img/sportefy/app-booking-details-301.webp" width="301" height="641" alt="Sportefy booking" loading="lazy" decoding="async"><img src="/assets/img/sportefy/app-checkout-301.webp" width="301" height="641" alt="Sportefy checkout" loading="lazy" decoding="async"></div><figcaption>Sportefy, released to both stores.</figcaption></figure></div>
   </div>
 </section>
-
-<section id="about" style="padding-top:0">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow"><span class="accent">03</span> — About</span>
-      <h2>Ships whole products, not just tickets.</h2>
-    </div>
-    <div class="about-grid">
-      <div class="about-bio reveal">
-        <p>I'm Zohaib — a full-stack engineer with three production SaaS platforms live right now, including mobile apps on the App Store &amp; Play Store and a marketplace running Stripe Connect payouts.</p>
-        <p>My strengths sit where most projects get risky: payments &amp; billing (Stripe, wallets, reconciliation), realtime features, and APIs that don't break existing clients. I default to typed contracts, tested code and honest scoping.</p>
-        <p>BS Computer Science, Institute of Business Administration (IBA) Karachi — National Talent Hunt Program scholar, top 33 of 7,290 candidates.</p>
-        <div class="hero-ctas" style="margin-top:4px">
-          <a class="btn btn-primary" href="assets/cv/Zohaib-Ali-Mughal-CV.pdf" target="_blank" rel="noopener">View CV ↗</a>
-          <a class="btn btn-ghost" href="assets/cv/Zohaib-Ali-Mughal-CV.pdf" download="Zohaib-Ali-Mughal-CV.pdf">Download CV</a>
-        </div>
-      </div>
-      <div class="timeline reveal">
-        <p class="timeline-org">Slidey LLC <span>·</span> Software Engineer II <span>·</span> Nov 2024 — Present</p>
-        <div class="timeline-item" data-accent="etg">
-          <span class="when">May 2026 — Present</span>
-          <span class="what">ETG Platform — Software Engineer II</span>
-          <span class="how">Sole architect on a greenfield field-service OS: dispatch, workforce, assets and dual-sided billing.</span>
-        </div>
-        <div class="timeline-item" data-accent="plexor">
-          <span class="when">Feb 2026 — Mar 2026</span>
-          <span class="what">Plexor — Software Engineer I</span>
-          <span class="how">Led the web side of a multi-camera computer-vision platform for retail loss prevention: video pipeline, alert routing and manager dashboards.</span>
-        </div>
-        <div class="timeline-item" data-accent="hyss">
-          <span class="when">Jan 2026 — Apr 2026</span>
-          <span class="what">Hyss — Software Engineer I</span>
-          <span class="how">Lead full-stack on a B2B live-event staffing marketplace across web, iOS and Android (hyss.io).</span>
-        </div>
-        <div class="timeline-item" data-accent="conek">
-          <span class="when">Mar 2025 — Dec 2025</span>
-          <span class="what">Conek, for A-SAFE Digital — Software Engineer I</span>
-          <span class="how">Event-driven quote-to-cash microservices over NATS JetStream, wired into A-SAFE&#39;s CRM.</span>
-        </div>
-        <div class="timeline-item" data-accent="sportefy">
-          <span class="when">Nov 2024 — Feb 2025</span>
-          <span class="what">Sportefy — Trainee Software Engineer</span>
-          <span class="how">NestJS API, Next.js admin panel and the Flutter app for a sports booking platform live in Pakistan.</span>
-        </div>
-      </div>
-    </div>
+<section class="faq wrap grid" id="questions" aria-labelledby="faq-h">
+  <div class="faq-list" data-reveal>
+    <h2 id="faq-h" class="faq-h">Questions</h2>
+    <ul><li><button type="button" class="q" id="q0" aria-expanded="true" aria-controls="a0"><span class="dot" aria-hidden="true"></span>Where are you, and which hours do you work?</button><div class="a" id="a0"><p>Karachi, Pakistan, on UTC+5. I overlap with US, EU and Australian working hours and send progress in writing.</p></div></li><li><button type="button" class="q" id="q1" aria-expanded="false" aria-controls="a1"><span class="dot" aria-hidden="true"></span>Can I hire you through Upwork or Fiverr?</button><div class="a" id="a1"><p>Yes, on either. You can also email me, and we agree the scope and the contract directly.</p></div></li><li><button type="button" class="q" id="q2" aria-expanded="false" aria-controls="a2"><span class="dot" aria-hidden="true"></span>Fixed price or hourly?</button><div class="a" id="a2"><p>The three starting offers are fixed price. Larger or open-ended work is scoped first, then priced as a project or billed hourly on Upwork.</p></div></li><li><button type="button" class="q" id="q3" aria-expanded="false" aria-controls="a3"><span class="dot" aria-hidden="true"></span>Can you work inside our existing codebase?</button><div class="a" id="a3"><p>Yes. Conek for A-SAFE was exactly that, maintaining and scaling services that were already in production.</p></div></li><li><button type="button" class="q" id="q4" aria-expanded="false" aria-controls="a4"><span class="dot" aria-hidden="true"></span>Which stack do you use?</button><div class="a" id="a4"><p>TypeScript throughout, with Next.js and React, NestJS or Fastify with tRPC, and PostgreSQL with Prisma. Flutter for mobile apps.</p></div></li><li><button type="button" class="q" id="q5" aria-expanded="false" aria-controls="a5"><span class="dot" aria-hidden="true"></span>Do you publish apps to the stores?</button><div class="a" id="a5"><p>Yes. Sportefy’s Flutter app is live on the App Store and the Play Store; store submission is part of the larger Flutter scope.</p></div></li></ul>
+  </div>
+  <div class="faq-pane" aria-hidden="true"><p></p></div>
+</section>
+<section class="contact wrap grid" aria-labelledby="contact-q">
+  <p class="contact-line" data-reveal>Send me the brief for your app, your payments or your voice agent, and I will reply with a scope.</p>
+  <figure class="contact-photo" data-reveal style="--i:1"><img src="/assets/img/photo/karachi-from-above-sq340.webp" width="340" height="340" alt="Karachi from above: rooftops running to the white dome of the Mazar-e-Quaid, with a red-roofed church and its spires in the foreground" loading="lazy" decoding="async" data-drift></figure>
+  <div class="contact-links" data-reveal style="--i:2">
+    <p class="contact-q" id="contact-q">Prefer a platform?</p>
+    <a class="link-plain" href="mailto:z.mughal.24648@gmail.com">z.mughal.24648@gmail.com</a>
+    <a class="link-plain" href="https://www.upwork.com/freelancers/zohaibmughal" rel="me">Upwork</a>
+    <p class="contact-place">Karachi, Pakistan, on UTC+5.</p>
   </div>
 </section>
-
-<section class="contact" id="contact">
-  <div class="container reveal">
-    <span class="eyebrow">04 — Contact</span>
-    <h2 style="margin-top:18px">Let's build<br>something.</h2>
-    <div class="contact-row">
-      <a class="btn btn-primary btn-lg" href="mailto:z.mughal.24648@gmail.com">z.mughal.24648@gmail.com</a>
-      <a class="btn btn-ghost" href="assets/cv/Zohaib-Ali-Mughal-CV.pdf" target="_blank" rel="noopener">View CV ↗</a>
-      <a class="btn btn-ghost" href="assets/decks/Portfolio.pdf" target="_blank" rel="noopener">Portfolio PDF ↗</a>
-    </div>
-    <div class="profile-links">
-      <span class="profile-label">Also on</span>
-      <a class="plink" href="https://linkedin.com/in/zohaibmughal24648" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><span>LinkedIn</span></a>
-      <a class="plink" href="https://github.com/Zohaib24648" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg><span>GitHub</span></a>
-      <a class="plink" href="https://www.upwork.com/freelancers/zohaibmughal" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg><span>Upwork</span></a>
-      <a class="plink" href="https://www.fiverr.com/users/zohaibmughal151" target="_blank" rel="noopener"><svg class="wide" viewBox="0 8 24 8" aria-hidden="true"><path d="M23.004 15.588a.995.995 0 1 0 .002-1.99.995.995 0 0 0-.002 1.99zm-.996-3.705h-.85c-.546 0-.84.41-.84 1.092v2.466h-1.61v-3.558h-.684c-.547 0-.84.41-.84 1.092v2.466h-1.61v-4.874h1.61v.74c.264-.574.626-.74 1.163-.74h1.972v.74c.264-.574.625-.74 1.162-.74h.527v1.316zm-6.786 1.501h-3.359c.088.546.43.858 1.006.858.43 0 .732-.175.83-.487l1.425.4c-.351.848-1.22 1.364-2.255 1.364-1.748 0-2.549-1.355-2.549-2.515 0-1.14.703-2.505 2.45-2.505 1.856 0 2.471 1.384 2.471 2.408 0 .224-.01.37-.02.477zm-1.562-.945c-.04-.42-.342-.81-.889-.81-.508 0-.81.225-.908.81h1.797zM7.508 15.44h1.416l1.767-4.874h-1.62l-.86 2.837-.878-2.837H5.72l1.787 4.874zm-6.6 0H2.51v-3.558h1.524v3.558h1.591v-4.874H2.51v-.302c0-.332.235-.536.606-.536h.918V8.412H2.85c-1.162 0-1.943.712-1.943 1.755v.4H0v1.316h.908v3.558z"/></svg><span>Fiverr</span></a>
-    </div>
-    <div class="contact-meta">
-      <span style="color:var(--text)">Zohaib Ali Mughal</span>
-      <span style="color:var(--text-3)">Available for contract &amp; freelance engagements</span>
-      <span style="color:var(--text-3)">Karachi, Pakistan · works across time zones</span>
-    </div>
+</main>
+<footer class="tiles wrap" aria-label="Site">
+  <div class="tile t-statement">
+    <p class="t-big">Web and mobile products, built from an empty repo to production.</p>
+    <p class="t-small">© 2026 Zohaib Ali Mughal. Photograph: <a href="https://commons.wikimedia.org/w/index.php?curid=35157868">“Karachi from above”</a> by Bilalhassan88, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>, via Wikimedia Commons.</p>
   </div>
-</section>
-
-<footer>
-  <div class="footer-inner">
-    <span>© 2026 Zohaib Ali Mughal</span>
-    <span class="footer-dots" aria-hidden="true">
-      <span style="background:var(--c-etg)"></span>
-      <span style="background:var(--c-hyss)"></span>
-      <span style="background:var(--c-conek)"></span>
-      <span style="background:var(--c-sportefy)"></span>
-      <span style="background:var(--c-plexor)"></span>
-    </span>
-    <a href="#top">Back to top ↑</a>
+  <nav class="tile t-nav" aria-label="Footer">
+    <a href="/#work">Work</a><a href="/#build">What I build</a><a href="/#prices">Offers</a>
+    <a href="/#process">Process</a><a href="/#questions">Questions</a>
+    <a href="https://www.upwork.com/freelancers/zohaibmughal" rel="me">Upwork</a><a href="https://www.fiverr.com/users/zohaibmughal151" rel="me">Fiverr</a>
+  </nav>
+  <div class="tile t-time">
+    <p>Karachi, UTC+5</p>
+    <p class="t-clock">It is <time id="khi-time">daytime</time> there now.</p>
   </div>
+  <div class="tile t-mail">
+    <p>Email</p>
+    <a class="t-addr" href="mailto:z.mughal.24648@gmail.com">z.mughal.24648@gmail.com</a>
+  </div>
+  <div class="tile t-mark" aria-hidden="true"><span>Zohaib Ali Mughal</span></div>
+  <a class="tile t-go" href="mailto:z.mughal.24648@gmail.com?subject=Project%20enquiry&amp;body=Hi%20Zohaib%2C%0A%0AWhat%20I%20need%20built%3A%0A%0AWhen%20I%20need%20it%3A%0A%0ABudget%3A%0A"><span>Start a project</span><svg class="arrow" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M10 38 38 10M16 10h22v22" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="square"/></svg></a>
 </footer>
-
-<script src="assets/js/lenis.min.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>
