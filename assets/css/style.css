@@ -690,6 +690,8 @@ footer {
 }
 
 .cs-meta-item .v { font-family: var(--font-head); font-weight: 500; font-size: 16px; }
+.cs-meta-item .v a { color: inherit; text-decoration: underline; text-decoration-color: var(--text-4); text-underline-offset: 3px; }
+.cs-meta-item .v a:hover { text-decoration-color: currentColor; }
 
 .cs-hero-media { margin-top: clamp(36px, 5vw, 64px); }
 
